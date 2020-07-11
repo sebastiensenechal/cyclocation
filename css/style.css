@@ -1,0 +1,605 @@
+@charset "utf-8";
+
+/* ********************
+
+ Global
+
+ ******************** */
+*, *:before, *:after {
+    outline: none;
+    -webkit-box-sizing: inherit;
+       -moz-box-sizing: inherit;
+            box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+}
+html {
+    width: 100vw;
+    height: auto;
+}
+body {
+    font-family: 'Nunito Sans', Verdana, sans-serif;
+    /* color: #514E53; */
+    color : #355070;
+    background:#e4e4e4;
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    width: 100vw;
+    height:auto;
+    max-height:100%;
+    overflow-x:hidden;
+    scroll-behavior: smooth; /* Un peu de douceur dans ce monde de brute */
+}
+#grid {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+
+
+/* ********************
+
+ Typographie
+
+ ******************** */
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Spectral:500,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons');
+p, address {font-size:1.2em;line-height:1.6em;font-weight:400;}
+a {font-size:1.2em; line-height:1.6em;font-weight:400; color:#fdfdfd;text-decoration: underline;}
+a:hover {text-decoration: none; color:rgb(242, 208, 169);}
+h1, h2, h3, h4 {font-family: 'Spectral', Georgia, serif;}
+h1 {font-size:2.5em;line-height:1.4em;text-transform:uppercase;font-weight:800;color:#355070;}
+h2 {font-size:2.2em;line-height:1.4em;text-transform:uppercase;font-weight:500;color:#fdfdfd;}
+h3 {font-size:1.2em;line-height:1.4em;font-weight:700;}
+
+#mainHeader {
+  position:absolute; /* Passer en fixed ? */
+  top:0;
+  left:15%;
+  z-index: 9999;
+  padding:1em 0;
+  background:transparent;
+}
+#mainHeader h1 {
+  color: #355070;
+  font-size: 3.5em;
+  letter-spacing: .5em;
+  line-height: 1em;
+}
+#mainHeader h1 span {font-size:30%;font-weight: 500;text-transform:none;letter-spacing: .3em;color:#514E53;}
+header {
+	background:#757575;
+	color:#355070;
+}
+footer {
+	background:#757575;
+  color:#fdfdfd;
+	padding:6em 4em;
+}
+footer article {
+  display: flex;
+}
+footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin-right: 6em;
+}
+section header {
+	background:#757575;
+  padding-left: 4em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+	width: 100%;
+	/* height: 130vh; */
+}
+section:nth-of-type(2n) {
+    background-color: #38353A;
+    color: #355070;
+}
+
+
+/* ********************
+
+ Diaporama
+
+ ******************** */
+#diaporama {
+    position: relative;
+    height: 110vh;
+    margin: 0 auto;
+}
+#diaporama figure {
+    display:inline-block;
+    height:110vh;
+    position: absolute;
+    min-width: 100%;
+    max-width: 1200px;
+    margin:0;
+    transition: all 2s;
+}
+#diaporama figure + figure {
+    opacity: 0;
+}
+#slide1 {
+  background-color: #00EAB5;
+}
+#slide1 h2, #slide2 h2, #slide3 h2, #slide4 h2 {color:#355070;}
+#slide2 {
+  background: rgb(242, 208, 169);
+}
+#slide3 {
+  background: rgb(255, 163, 165);
+  /* color: #FCE4EC; */
+}
+#slide4 {
+  background: rgb(217, 219, 241);
+  /* color: #FCE4EC; */
+}
+#diaporama figure img {
+	  /* display:block; */
+    position: absolute;
+    right: 0;
+    /* width: 40%; */
+    height: 100%;
+}
+#diaporama #slide2 img {
+  height:50%;
+  top:30%;
+  right:10%;
+}
+#diaporama #slide4 img {
+    height: 40%;
+    right: 20%;
+    top: 35%;
+}
+#diaporama figcaption {
+	/* position: absolute;
+	top:10%;
+  left: 10%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15%;
+	width: 40%;
+	height: 100%;
+  font-size:120%;
+}
+#diaporama h2, #diaporama p {z-index:2;}
+#arrowLeft, #arrowRight {
+	position: absolute;
+    z-index: 2;
+    top: 50%;
+    cursor: pointer;
+}
+#arrowLeft {
+	left: 2.5em;
+}
+#arrowRight {
+	right: 1em;
+}
+
+#arrowLeft > .arrow-left {
+	height: 30px;
+  width: 30px;
+  border-top: 5px solid #454545;
+  border-right: 5px solid #454545;
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+    -webkit-transform: translate(-20%, -50%) rotate(225deg);
+    -ms-transform: translate(-20%, -50%) rotate(225deg);
+    -o-transform: translate(-20%, -50%) rotate(225deg);
+  transform: translate(-20%, -50%) rotate(225deg);
+}
+#arrowRight > .arrow-right {
+	height: 30px;
+  width: 30px;
+  border-top: 5px solid #454545;
+  border-right: 5px solid #454545;
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+    -webkit-transform: translate(-70%, -50%) rotate(45deg);
+    -ms-transform: translate(-70%, -50%) rotate(45deg);
+    -o-transform: translate(-70%, -50%) rotate(45deg);
+  transform: translate(-70%, -50%) rotate(45deg);
+}
+#control {
+  position: absolute;
+  z-index: 2;
+  top: 85%;
+  left: 47%;
+}
+#pauseSlide {
+  background:transparent;
+  padding:0;
+  border:none;
+}
+img.arrow_down, #pauseSlide {
+  display: inline-block;
+  /* width: 30px; */
+  cursor: pointer;
+}
+button.controls > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+
+/* ********************
+
+ Carte et infos stations
+
+ ******************** */
+#cartographie article {display:flex;}
+#map {
+  width: 75%;
+  min-height: 80vh;
+}
+
+#infoStation {
+   width: 25%;
+   background-color: #00EAB5;
+   color: #355070;
+   padding: 1em;
+   /* display: none; */
+   flex-direction: column;
+   justify-content: flex-start;
+   z-index:999;
+}
+
+#infoStation h2 {
+   margin-left: .5em;
+   font-size: 1.8em;
+   color: #355070;
+}
+
+#listeInfo {
+   list-style-type: none;
+   margin: 1em 0;
+   padding-left: 1em;
+}
+
+#infoBeforeBooking {
+  margin: 2em 1.5em 1em .8em;
+}
+
+#listeInfo li {
+   font-size: 1em;
+   font-weight: bold;
+   margin: 1em 0;
+}
+
+#listeInfo li + li {
+   margin-top: 1em;
+}
+
+#listeInfo span {
+   font-weight: 300;
+   color: #464646;
+   font-size: 1em;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+input[type="text"] {
+  width: 280px;
+  border-bottom: 3px solid #fff;
+  background: #00EAB5;
+  margin: 0 0 5px;
+  padding: 10px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  font-size: .9em;
+  font-weight: bold;
+  color: #454545;
+}
+input[type="text"]:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border-bottom: 3px solid #aaa;
+}
+input:required {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #fff;
+  box-shadow: none;
+}
+abbr {
+    font-size: .8em;
+    vertical-align: top;
+    color: red;
+    cursor: pointer;
+}
+canvas {
+  cursor: crosshair;
+  border: 1px dotted #fff;
+  border-bottom: 3px solid #fff;
+}
+/* #sketch {
+  width:350px;
+  height:150px;
+  border: 1px solid #fff;
+} */
+#reservationBlock {
+  padding-left: 1em;
+}
+#reservationBlock h2 {
+  margin-left: 0;
+}
+#buttonReserv {padding-left:1em;}
+#buttonReserv button, #buttonValid button, #buttonClear button, #buttonCancel button {
+    /* display: inline-block; */
+    color:#454545;
+    padding: 1em 2em;
+    border: 2px solid #454545;
+    cursor: pointer;
+    font-weight: bold;
+    background: #00EAB5;
+}
+#buttonReserv button:hover, #buttonValid button:hover, #buttonClear button:hover, #buttonCancel button:hover {
+    border: 2px solid #eee;
+}
+#errorReserv, #missingInfo {
+  width: 80%;
+  font-size: .9em;
+  border-left: 5px solid rgb(241, 94, 94);
+  padding-left: 1em;
+  margin: 2em 0 2em 1em;
+}
+#reservationValide {
+  width: 80%;
+  font-size: .9em;
+  border-left: 5px solid #9700f1;
+  padding-left: 1em;
+  margin: 2em 0 2em 0;
+}
+#reservationTimer {
+  color:#9700f1;
+  font-weight: bold;
+}
+#stationReservation {
+  color:#9700f1;
+}
+
+ /***************
+
+ RESPONSIVE
+
+ ****************/
+ /* Smartphone */
+ @media (max-width: 30em) {
+   #mainHeader h1 {
+    font-size: 2em;
+    letter-spacing: .1em;
+    line-height: 1.2em;
+   }
+   #mainHeader h1 span {
+    font-size: 35%;
+    letter-spacing: .1em;
+  }
+  #diaporama, #diaporama figure {
+    height: 100vh;
+  }
+  #diaporama figcaption {
+    width: 70%;
+    font-size: 100%;
+    padding-top: 3em;
+   }
+   #slide1 img {
+    opacity: .5;
+   }
+   #slide4 img {
+    display:none;
+   }
+ 	p, address, a {font-size:1em;}
+ 	h1 {font-size:2em;line-height: 1em;}
+  h1 span {font-size:60%;}
+ 	h2 {font-size:1.4em;}
+ 	h3 {font-size:1.4em;}
+  section header {
+    padding-left: 1em;
+  }
+  #arrowRight {
+    right: 1em;
+  }
+  #arrowLeft {
+    left: 1.2em;
+  }
+  #arrowRight > .arrow-right, #arrowLeft > .arrow-left {
+    height: 15px;
+    width: 15px;
+    border-top: 4px solid #454545;
+    border-right: 4px solid #454545;
+  }
+  #control {
+    top: 90%;
+    left: 40%;
+  }
+  img.arrow_down, #pauseSlideImg {
+      width:30px
+  }
+  #cartographie article {
+    flex-direction:column;
+    overflow-x: hidden;
+  }
+  #map {
+    width:100%;
+  }
+  #infoStation {
+    width:100%;
+    padding: 2em 0 2em 2em;
+  }
+  #infoStation h2 {
+    margin-left: 0;
+    font-size:1.8em;
+  }
+  #listeInfo {
+    padding-left: 0;
+    padding-right: 2em;
+    font-size:80%;
+  }
+  #infoBeforeBooking {
+    margin: 2em 5em 2em 0;
+  }
+  #buttonReserv {
+    padding-left: 0;
+  }
+  input[type="text"] {
+    width: 200px;
+  }
+  #sketch {
+    width: 210px;
+  }
+  #reservationBlock {
+    padding-left: 0;
+  }
+  footer {
+    padding: 2em;
+  }
+  footer article {
+    flex-direction: column;
+  }
+  footer ul {
+    margin-right: 1em;
+  }
+} /* Fin Smartphone */
+
+/* Tablettes et écrans moyens */
+@media screen and (min-width: 30em) and (max-width: 48em) {
+  #mainHeader h1 span {display: none;}
+  #diaporama, #diaporama figure {
+    height: 130vh;
+  }
+  #diaporama figcaption {
+    width: 50%;
+    font-size: 100%;
+    left: 11%;
+   }
+  section header {
+    padding-left: 5em;
+  }
+  #cartographie article {
+    flex-direction:column;
+    overflow-x: hidden;
+  }
+  #map {
+    width: 100%;
+  }
+  #infoStation {
+    width:100%;
+  }
+  #infoStation h2 {
+    text-align: left;
+    margin: .4em;
+  }
+  #listeInfo {
+    padding-left: 1em;
+  }
+  footer {
+    padding: 5em;
+  }
+  footer article {
+    flex-direction: column;
+  }
+  footer ul {
+    margin-right: 1em;
+  }
+}
+
+/* Ecrans ordinaires à grands (HD) */
+@media screen and (min-width: 48em) and (max-width: 71.25em) {
+  #mainHeader h1 {font-size:3em;}
+  #diaporama figcaption {
+    width: 40%;
+    height: 110%;
+   }
+  #diaporama, #diaporama figure {height: 110vh;}
+  #diaporama figure img {opacity: .7;}
+  p, address, a {font-size: 1em;}
+  h2 {font-size:1.8em;}
+  #infoStation {width:30%;}
+}
+
+@media screen and (orientation: portrait) {
+  #cartographie article {
+    flex-direction:column;
+    overflow-x: hidden;
+  }
+  #map {
+    width: 100%;
+  }
+  #infoStation {
+    width:100%;
+  }
+}
+
+/* Grands écrans */
+@media screen and (min-width: 2560px) and (orientation: landscape) {
+  h2 {font-size:4em;}
+  #mainHeader h1 {
+    font-size: 6em;
+  }
+  p {font-size:2em;}
+  #infoStation h2 {
+    margin-left: .5em;
+    margin-bottom: 1.5em;
+    font-size: 3.5em;
+  }
+  #listeInfo li {
+    font-size: 1.6em;
+    margin: 2em 0;
+  }
+  #buttonReserv button, #buttonValid button, #buttonClear button, #buttonCancel button {
+    padding: .8em 1.6em;
+    font-size: 1.6em;
+  }
+  #reservationBlock {
+    max-width: 90%;
+  }
+  input[type="text"] {
+    width: 80%;
+    padding: .6em;
+    font-size: 1.4em;
+  }
+  footer li {font-size:2em;}
+  footer a {font-size:1em;}
+}
+
+
+/* Print */
+@media print {
+
+}

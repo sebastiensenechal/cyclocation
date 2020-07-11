@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Cyclo location | Réserve ton vélo en quelques cliques</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="description" content="Réserve ton vélo en moins d'une minute, où que tu sois !" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="Cyclo-location" />
+        <meta name="twitter:creator" content="Sébastien Sénéchal" />
+        <meta property="og:url" content="https://sebastiensenechal.com/openclassroom/cyclocation/" />
+        <meta property="og:title" content="Cyclo location | Réserve ton vélo en quelques cliques" />
+        <meta property="og:description" content="Réserve ton vélo en moins d'une minute, où que tu sois !" />
+        <meta property="og:image" content="https://sebastiensenechal.com/openclassroom/cyclocation/img/topo2.png" />
+        <!-- Open Graph -->
+        <meta property="og:title" content="Cyclo location | Réserve ton vélo en quelques cliques" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://sebastiensenechal.com/openclassroom/cyclocation/" />
+        <meta property="og:image" content="https://sebastiensenechal.com/openclassroom/cyclocation/img/topo2.png" />
+        <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+        <!-- Feuilles de style -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div id="grid">
+
+            <section id="diaporamaSection" class="slider">
+                <header id="mainHeader">
+                  <h1><span>Réserve ton vélo en quelques cliques.</span><br>
+                    Cyclo location</h1>
+                </header>
+
+                <div id="diaporama">
+                    <div id="arrowLeft">
+                        <div class="arrow-left"></div>
+                    </div>
+
+                    <figure class="slide" id="slide1">
+                      <img src="img/roue-velo-blanc.svg" alt="">
+                        <figcaption>
+                          <h2>Comment ça marche&nbsp;?</h2>
+                          <p>Nous avons conçu ce service pour une utilisation tous terrains.<br>
+                            Pour réserver un vélo c'est simple, laisse-toi guider.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="slide" id="slide2">
+                        <img src="img/markers-fig2.png" alt="">
+                        <figcaption>
+                            <h2>Carte simplifiée</h2>
+                            <p>Déplace toi sur la carte ci-dessous et sélectionne une station.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="slide" id="slide3">
+                        <img src="img/topo-jaune.svg" alt="">
+                        <figcaption>
+                            <h2>Choisi ta station</h2>
+                            <p>&Eacute;tat de la station, ouverte ou fermée<br>
+                              Vélos et places disponibles.<br>
+                              Choisi la station qui te convient.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="slide" id="slide4">
+                        <img src="img/reserver.png" alt="">
+                        <figcaption>
+                            <h2>Réserve / Annule</h2>
+                            <p>Clique sur &laquo;Réserver&raquo;, renseigne ton prénom, ton nom et signe.<br>
+                            Tu as vingt minutes pour récupérer ton vélo ou annuler.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="slide" id="slide5">
+                        <img src="img/reserver.png" alt="">
+                        <figcaption>
+                            <h2>Réserve / Annule</h2>
+                            <p>Clique sur &laquo;Réserver&raquo;, renseigne ton prénom, ton nom et signe.<br>
+                            Tu as vingt minutes pour récupérer ton vélo ou annuler.</p>
+                        </figcaption>
+                    </figure>
+
+                    <div id="arrowRight">
+                        <div class="arrow-right"></div>
+                    </div>
+
+                    <div id="control">
+                      <button class="controls" id="pauseSlide"><span>Mettre en pause le diaporama</span><img src="img/pause.svg" alt="" id="pauseSlideImg" /></button>
+                      <a href="#cartographie" title="Voir plus bas"><img src="img/arrow_down_dark.svg" alt="" class="arrow_down" /></a>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="cartographie" class="carte">
+                <article>
+                  <div id="map">
+                      <!-- Carte -->
+                  </div>
+                  <div id="infoStation"> <!-- Bloc d'information sur les stations -->
+                    <h2>Station</h2>
+                      <p id="infoBeforeBooking">Sélectionne une station pour en savoir plus.<br>
+                      Si celle-ci est ouverte et qu'un vélo est disponible, réserve en moins d'une minute.</p>
+
+                      <!-- Liste des informations sur la station -->
+                      <ul id="listeInfo">
+                          <li>Nom : <span id="nomStation"></span></li>
+                          <li>Etat : <span id="etatStation"></span></li>
+                          <li>Vélos disponibles : <span id="veloDispo"></span></li>
+                          <li>Places disponibles : <span id="attacheDispo"></span></li>
+                      </ul>
+
+                      <span id="buttonReserv"><button>Réserver</button></span>
+                      <span id="errorReserv">Non disponible</span>
+                      <span id="missingInfo">Veuillez renseigner tous les champs</span>
+
+                      <div id="reservationBlock">
+                        <h2>Réservation</h2>
+                        <!-- Formulaire de réservation -->
+                        <form>
+                          <label for="firstname">Nom (requis)</label>
+                          <input type="text" id="firstname" name="firstname" placeholder="* Prénom" title="Prénom requis" onchange="StorageForm.populateStorage()" required />
+                          <label for="lastname">Prénom (requis)</label>
+                          <input type="text" id="lastname" name="lastname" placeholder="* Nom" title="Nom requis" onchange="StorageForm.populateStorage()" required />
+                        </form>
+                        <!-- Canvas et container -->
+                        <p><abbr title="Signature requise">*</abbr> Signature</p>
+                        <canvas id="paint">
+                          Votre navigateur est obsolète, vous devez le mettre à niveau pour signer
+                        </canvas>
+                        <div>
+                          <span id="buttonClear"><button>Effacer signature</button></span>
+                          <span id="buttonValid"><button>Je réserve</button></span>
+                        </div>
+                      </div>
+
+                      <aside id="reservationValide">
+                        <p>Merci <span id="firstnameReservation"></span> <span id="lastnameReservation"></span> !<br>
+                        Location validée à la station <span id="stationReservation"></span> pour une durée de <span id="reservationTimer"></span>.</p>
+                        <span id="buttonCancel"><button>J'annule ma réservation</button></span>
+                      </aside>
+                  </div> <!-- fin cadre informations sur la station sélectionnée -->
+                  </article>
+            </section>
+
+            <footer>
+              <section>
+                <h2>Cyclo location</h2>
+                <article>
+                  <ul>
+                    <li><address>
+                      34 Boulevard Foche<br>
+                      75005 Paris
+                    </address></li>
+                    <li>Tel : <a href="tel:+3314594010101" title="Nous contacter par téléphone">+33 1 45 01 01 01</a></li>
+                    <li>Fax : <a href="fax:+3314594010120" title="Télécopie">+33 1 45 01 01 20</a></li>
+                    <li>Couriel : <a href="mailto:info@cyclo-location.fr" title="Nous adresser un couriel">info@cyclo-location.fr</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="#" title="Conditions générales d'utilisation">CGU</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#" title="Réglement général pour la protection des données">Données personnelles</a></li>
+                  </ul>
+                </article>
+              </section>
+            </footer>
+
+        </div>
+
+
+
+        <!-- ======== Scripts ======== -->
+        <!-- diaporama.js -->
+        <script src="js/diaporama.js"></script>
+        <!-- map.js + markers -->
+        <script src="js/map.js"></script>
+        <!-- leaflet -->
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+        <!-- reservation.js -->
+        <script src="js/reservation.js"></script>
+        <script>Maps.initMap();</script>
+        <!-- canvas.js -->
+        <script src="js/canvas.js"></script>
+    </body>
+
+</html>
