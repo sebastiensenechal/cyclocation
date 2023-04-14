@@ -13,23 +13,16 @@
     -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
 }
-html {
-    width: 100vw;
-    height: auto;
-}
+
 body {
-    font-family: 'Nunito Sans', Verdana, sans-serif;
     /* color: #514E53; */
     color : #355070;
-    background:#e4e4e4;
     margin: 0;
     font-size: 16px;
     line-height: 24px;
-    width: 100vw;
     height:auto;
     max-height:100%;
     overflow-x:hidden;
-    scroll-behavior: smooth; /* Un peu de douceur dans ce monde de brute */
 }
 #grid {
     width:100%;
@@ -41,21 +34,7 @@ body {
 
 
 
-/* ********************
 
- Typographie
-
- ******************** */
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Spectral:500,700,800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Material+Icons');
-p, address {font-size:1.2em;line-height:1.6em;font-weight:400;}
-a {font-size:1.2em; line-height:1.6em;font-weight:400; color:#fdfdfd;text-decoration: underline;}
-a:hover {text-decoration: none; color:rgb(242, 208, 169);}
-h1, h2, h3, h4 {font-family: 'Spectral', Georgia, serif;}
-h1 {font-size:2.5em;line-height:1.4em;text-transform:uppercase;font-weight:800;color:#355070;}
-h2 {font-size:2.2em;line-height:1.4em;text-transform:uppercase;font-weight:500;color:#fdfdfd;}
-h3 {font-size:1.2em;line-height:1.4em;font-weight:700;}
 
 #mainHeader {
   position:absolute; /* Passer en fixed ? */
@@ -72,10 +51,7 @@ h3 {font-size:1.2em;line-height:1.4em;font-weight:700;}
   line-height: 1em;
 }
 #mainHeader h1 span {font-size:30%;font-weight: 500;text-transform:none;letter-spacing: .3em;color:#514E53;}
-header {
-	background:#757575;
-	color:#355070;
-}
+
 footer {
 	background:#757575;
   color:#fdfdfd;
@@ -88,23 +64,6 @@ footer ul {
     list-style: none;
     padding-left: 0;
     margin-right: 6em;
-}
-section header {
-	background:#757575;
-  padding-left: 4em;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  display: flex;
-  flex-direction: column;
-}
-
-section {
-	width: 100%;
-	/* height: 130vh; */
-}
-section:nth-of-type(2n) {
-    background-color: #38353A;
-    color: #355070;
 }
 
 
