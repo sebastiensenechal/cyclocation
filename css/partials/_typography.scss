@@ -2,41 +2,71 @@
 
 $text-color: #355070;
 $main-font-size: 1.2em;
+$font-family_1: 'Spectral', Georgia, serif;
+$font-family_2: 'Nunito Sans', Verdana, sans-serif;
 
- @import 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap';
- @import 'https://fonts.googleapis.com/css?family=Spectral:500,700,800&display=swap';
- @import 'https://fonts.googleapis.com/css?family=Material+Icons';
- body {
-     font-family: 'Nunito Sans', Verdana, sans-serif;
-     background:#e4e4e4;
-     scroll-behavior: smooth; /* Un peu de douceur dans ce monde de brute */
- }
- h1, h2, h3, h4 {
-     font-family: 'Spectral', Georgia, serif;
- }
- p, a, address {
-     line-height:1.6em;font-weight:400;
- }
- p, a, address, h3 {
-    font-size:$main-font-size;
- }
- 
- a {
-     color:#fdfdfd;
-     text-decoration: underline;
-         &:hover {
-             text-decoration: none;
-             color:rgb(242, 208, 169);
-         }
- }
- 
-  
-  h1 {
-     font-size:2.5em;
-     line-height:1.4em;
-     text-transform:uppercase;
-     font-weight:800;
-     color:$text-color;
- }
-  h2 {font-size:2.2em;line-height:1.4em;text-transform:uppercase;font-weight:500;color:#fdfdfd;}
-  h3 {line-height:1.4em;font-weight:700;}
+@import "https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap";
+@import "https://fonts.googleapis.com/css?family=Spectral:500,700,800&display=swap";
+@import "https://fonts.googleapis.com/css?family=Material+Icons";
+
+
+body {
+    font-family: $font-family_2;
+    font-size: 16px;
+    line-height: 24px;
+    color : $text-color;
+}
+
+p {
+	font-size: 1.2em;
+	line-height: 1.6em;
+	font-weight: 400;
+}
+
+address {
+	font-size: 1.2em;
+	line-height: 1.6em;
+	font-weight: 400;
+}
+
+a {
+    font-size: 1.2em;
+	line-height: 1.6em;
+	font-weight: 400;
+    color:#fdfdfd;
+    text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+            color:rgb(242, 208, 169);
+        }
+}
+
+h1 {
+	font-family: $font-family_1;
+	font-size: 2.5em;
+	line-height: 1.4em;
+	text-transform: uppercase;
+	font-weight: 800;
+	color:$text-color;
+}
+
+h2 {
+	font-family: $font-family_1;
+	font-size: 2.2em;
+	line-height: 1.4em;
+	text-transform: uppercase;
+	font-weight: 500;
+	color:#fdfdfd;
+}
+
+h3 {
+	font-family: $font-family_1;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	font-weight: 700;
+}
+
+h4 {
+	font-family: $font-family_1;
+}
+

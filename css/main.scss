@@ -1,12 +1,10 @@
 @charset "utf-8";
 
-@import "partials/mixins";
-// import "layout"; 
-@import "partials/typography";
-@import "partials/slider";
-@import "partials/map";
-
-
+@import 'partials/mixins';
+@import 'partials/layout'; 
+@import 'partials/typography';
+@import 'partials/slider';
+@import 'partials/map';
 
 
 
@@ -14,8 +12,6 @@ html {
     width: 100vw;
     height: auto;
 }
-
-
 
 
 /* ********************* 
@@ -40,4 +36,3 @@ section {
 	    color: $text-color;
     }
 }
-
