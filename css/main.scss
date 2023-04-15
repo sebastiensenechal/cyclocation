@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+@import "_mixins";
+// import "_layout"; 
+@import "_typography";
+@import "_slider";
+@import "_map";
+
+
+
 $text-color: #355070;
 $main-font-size: 1.2em;
 
