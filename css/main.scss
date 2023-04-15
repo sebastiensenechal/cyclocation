@@ -1,61 +1,19 @@
 @charset "utf-8";
 
-@import "_mixins";
-// import "_layout"; 
-@import "_typography";
-@import "_slider";
-@import "_map";
+@import "partials/mixins";
+// import "layout"; 
+@import "partials/typography";
+@import "partials/slider";
+@import "partials/map";
 
 
 
-$text-color: #355070;
-$main-font-size: 1.2em;
+
 
 html {
     width: 100vw;
     height: auto;
 }
-
-/* ********************
- Typographie
- ******************** */
-@import 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap';
-@import 'https://fonts.googleapis.com/css?family=Spectral:500,700,800&display=swap';
-@import 'https://fonts.googleapis.com/css?family=Material+Icons';
-body {
-    font-family: 'Nunito Sans', Verdana, sans-serif;
-    background:#e4e4e4;
-    scroll-behavior: smooth; /* Un peu de douceur dans ce monde de brute */
-}
-h1, h2, h3, h4 {
-    font-family: 'Spectral', Georgia, serif;
-}
-p, a, address {
-    line-height:1.6em;font-weight:400;
-}
-p, a, address, h3 {
-   font-size:$main-font-size;
-}
-
-a {
-    color:#fdfdfd;
-    text-decoration: underline;
-        &:hover {
-            text-decoration: none;
-            color:rgb(242, 208, 169);
-        }
-}
-
- 
- h1 {
-    font-size:2.5em;
-    line-height:1.4em;
-    text-transform:uppercase;
-    font-weight:800;
-    color:$text-color;
-}
- h2 {font-size:2.2em;line-height:1.4em;text-transform:uppercase;font-weight:500;color:#fdfdfd;}
- h3 {line-height:1.4em;font-weight:700;}
 
 
 
