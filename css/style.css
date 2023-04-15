@@ -119,7 +119,7 @@ footer ul {
     right: 20%;
     top: 35%;
 }
-#diaporama figcaption {
+#diaporama figcaption { /* replace by slide__figcaption ? */
 	/* position: absolute;
 	top:10%;
   left: 10%; */
