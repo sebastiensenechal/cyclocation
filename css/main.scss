@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import 'partials/mixins';
+@import 'partials/share';
 @import 'partials/layout'; 
 @import 'partials/typography';
 @import 'partials/slider';
@@ -23,7 +23,7 @@ section {
 
     &:nth-of-type(2n) {
         background-color: #38353A;
-        color: #355070;
+        color: $text-color;
     }
 
     header {
