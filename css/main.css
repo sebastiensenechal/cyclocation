@@ -33,6 +33,12 @@ body {
   align-items: stretch;
   justify-content: center; }
 
+section {
+  width: 100%; }
+  section:nth-of-type(2n) {
+    background-color: #38353A;
+    color: #355070; }
+
 p {
   font-size: 1.2em;
   line-height: 1.6em;
@@ -96,22 +102,5 @@ h4 {
       text-transform: none;
       letter-spacing: .3em;
       color: #514E53; }
-
-/* ********************* 
-        Section
-********************** */
-section {
-  width: 100%; }
-  section:nth-of-type(2n) {
-    background-color: #38353A;
-    color: #355070; }
-  section header {
-    background: #757575;
-    padding-left: 4em;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    display: flex;
-    flex-direction: column;
-    color: #355070; }
 
 /*# sourceMappingURL=main.css.map */

@@ -34,3 +34,12 @@ body {
     align-items: stretch;
     justify-content: center;
 }
+
+section {
+	width: 100%;
+
+    &:nth-of-type(2n) {
+        background-color: #38353A;
+        color: $text-color;
+    }
+}

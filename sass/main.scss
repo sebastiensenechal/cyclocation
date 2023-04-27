@@ -5,28 +5,3 @@
 @import 'partials/footer'; 
 @import 'partials/slider';
 @import 'partials/map';
-
-
-
-/* ********************* 
-        Section
-********************** */
-
-section {
-	width: 100%;
-
-    &:nth-of-type(2n) {
-        background-color: #38353A;
-        color: $text-color;
-    }
-
-    header {
-        background:#757575;
-        padding-left: 4em;
-        padding-top: 2em;
-        padding-bottom: 2em;
-        display: flex;
-        flex-direction: column;
-	    color: $text-color;
-    }
-}
