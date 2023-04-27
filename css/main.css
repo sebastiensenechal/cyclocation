@@ -103,4 +103,15 @@ h4 {
       letter-spacing: .3em;
       color: #514E53; }
 
+.footer {
+  background: #757575;
+  color: #fdfdfd;
+  padding: 6em 4em; }
+  .footer__content {
+    display: flex; }
+  .footer__list {
+    list-style: none;
+    padding-left: 0;
+    margin-right: 6em; }
+
 /*# sourceMappingURL=main.css.map */

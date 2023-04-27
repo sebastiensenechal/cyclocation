@@ -1,1 +1,16 @@
-@charset "utf-8";
+.footer {
+    background:#757575;
+    color:#fdfdfd;
+    padding:6em 4em;
+    
+    &__content {
+        display: flex;
+    }
+    
+    &__list {
+        list-style: none;
+        padding-left: 0;
+        margin-right: 6em;
+    }
+}
+
