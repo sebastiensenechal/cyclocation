@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+*, *:before, *:after {
+    outline: none;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    width: 100vw;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    height:auto;
+    max-height:100%;
+    overflow-x:hidden;
+    background:#e4e4e4;
+    font-family: $font-family_2;
+    font-size: 16px;
+    line-height: 24px;
+    color : $text-color;
+    scroll-behavior: smooth; /* Un peu de douceur dans ce monde de brute */
+}
+
+#grid {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}

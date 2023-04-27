@@ -1,1 +1,23 @@
-@charset "utf-8";
+.mainHeader {
+	position: absolute;
+	top: 0;
+	left: 15%;
+	z-index: 9999;
+	padding: 1em 0;
+	background: transparent;
+
+    &__title {
+        color: $text-color;
+        font-size: 3.5em;
+        letter-spacing: .5em;
+        line-height: 1em;
+
+        &--subtitle {
+            font-size: 30%;
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: .3em;
+            color: $title-color;
+        }
+    }
+}

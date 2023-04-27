@@ -1,54 +1,7 @@
 @charset "utf-8";
 
-/* ********************
-
- Global
-
- ******************** */
-*, *:before, *:after {
-    outline: none;
-    -webkit-box-sizing: inherit;
-       -moz-box-sizing: inherit;
-            box-sizing: inherit;
-    -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-    margin: 0;
-    height:auto;
-    max-height:100%;
-    overflow-x:hidden;
-    background:#e4e4e4;
-    scroll-behavior: smooth; /* Un peu de douceur dans ce monde de brute */
-}
-#grid {
-    width:100%;
-    display: flex;
-    flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-}
 
 
-
-
-
-#mainHeader {
-  position:absolute; /* Passer en fixed ? */
-  top:0;
-  left:15%;
-  z-index: 9999;
-  padding:1em 0;
-  background:transparent;
-}
-#mainHeader h1 {
-  color: #355070;
-  font-size: 3.5em;
-  letter-spacing: .5em;
-  line-height: 1em;
-}
-#mainHeader h1 span {font-size:30%;font-weight: 500;text-transform:none;letter-spacing: .3em;color:#514E53;}
 
 footer {
 	background:#757575;
