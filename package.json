@@ -4,7 +4,8 @@
   "description": "interactive map for rent a bike",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
   },
   "repository": {
     "type": "git",
