@@ -1,8 +1,10 @@
 @charset "utf-8";
 
-@import 'partials/share';
+@import 'partials/variables';
 @import 'partials/layout'; 
 @import 'partials/typography';
+@import 'partials/header';
+@import 'partials/footer'; 
 @import 'partials/slider';
 @import 'partials/map';
 
