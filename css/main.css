@@ -214,6 +214,90 @@ Slideshow
   background: #d9dbf1;
   /* color: #FCE4EC; */ }
 
+/* ********************
+
+Map and station info
+
+******************** */
+.map {
+  display: flex; }
+  .map__embed {
+    width: 75%;
+    min-height: 80vh; }
+  .map__info {
+    width: 25%;
+    background-color: #00EAB5;
+    color: #355070;
+    padding: 1em;
+    /* display: none; */
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 999; }
+    .map__info h2 {
+      margin-left: .5em;
+      font-size: 1.8em;
+      color: #355070; }
+    .map__info > p {
+      margin: 2em 1.5em 1em .8em; }
+  .map__station {
+    list-style-type: none;
+    margin: 1em 0;
+    padding-left: 1em; }
+    .map__station li {
+      font-size: 1em;
+      font-weight: bold;
+      margin: 1em 0; }
+    .map__station li + li {
+      margin-top: 1em; }
+    .map__station span {
+      font-weight: 300;
+      color: #464646;
+      font-size: 1em; }
+  .map__reserv {
+    padding-left: 1em; }
+    .map__reserv h2 {
+      margin-left: 0; }
+  .map__form {
+    display: flex;
+    flex-direction: column; }
+    .map__form .map__label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      /* added line */
+      border: 0; }
+
+input[type="text"] {
+  width: 280px;
+  border-bottom: 3px solid #fff;
+  background: #00EAB5;
+  margin: 0 0 5px;
+  padding: 10px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  font-size: .9em;
+  font-weight: bold;
+  color: #454545; }
+
+input[type="text"]:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border-bottom: 3px solid #aaa; }
+
+input:required {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #fff;
+  box-shadow: none; }
+
 .footer {
   background: #757575;
   color: #fdfdfd;

@@ -77,15 +77,6 @@
                         </figcaption>
                     </figure>
 
-                    <!-- <figure class="slide diaporama__slide" id="slide5">
-                        <img src="img/reserver.png" alt="">
-                        <figcaption class="slide__figcaption">
-                            <h2>Réserve / Annule</h2>
-                            <p>Clique sur &laquo;Réserver&raquo;, renseigne ton prénom, ton nom et signe.<br>
-                            Tu as vingt minutes pour récupérer ton vélo ou annuler.</p>
-                        </figcaption>
-                    </figure> -->
-
                     <div id="arrowRight">
                         <div class="arrow-right"></div>
                     </div>
@@ -98,18 +89,18 @@
 
             </section>
 
-            <section id="cartographie" class="carte">
-                <article>
-                  <div id="map">
+            <section id="cartographie">
+                <article class="map">
+                  <div id="map" class="map__embed">
                       <!-- Carte -->
                   </div>
-                  <div id="infoStation"> <!-- Bloc d'information sur les stations -->
+                  <div id="infoStation" class="map__info"> <!-- Bloc d'information sur les stations -->
                     <h2>Station</h2>
                       <p id="infoBeforeBooking">Sélectionne une station pour en savoir plus.<br>
                       Si celle-ci est ouverte et qu'un vélo est disponible, réserve en moins d'une minute.</p>
 
                       <!-- Liste des informations sur la station -->
-                      <ul id="listeInfo">
+                      <ul id="listeInfo" class="map__station">
                           <li>Nom : <span id="nomStation"></span></li>
                           <li>Etat : <span id="etatStation"></span></li>
                           <li>Vélos disponibles : <span id="veloDispo"></span></li>
@@ -120,13 +111,13 @@
                       <span id="errorReserv">Non disponible</span>
                       <span id="missingInfo">Veuillez renseigner tous les champs</span>
 
-                      <div id="reservationBlock">
+                      <div id="reservationBlock" class="map__reserv">
                         <h2>Réservation</h2>
                         <!-- Formulaire de réservation -->
-                        <form>
-                          <label for="firstname">Nom (requis)</label>
+                        <form class="map__form">
+                          <label class="map__label" for="firstname">Nom (requis)</label>
                           <input type="text" id="firstname" name="firstname" placeholder="* Prénom" title="Prénom requis" onchange="StorageForm.populateStorage()" required />
-                          <label for="lastname">Prénom (requis)</label>
+                          <label class="map__label" for="lastname">Prénom (requis)</label>
                           <input type="text" id="lastname" name="lastname" placeholder="* Nom" title="Nom requis" onchange="StorageForm.populateStorage()" required />
                         </form>
                         <!-- Canvas et container -->

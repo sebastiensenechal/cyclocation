@@ -1,99 +1,5 @@
 @charset "utf-8";
 
-/* ********************
-
- Carte et infos stations
-
- ******************** */
-#cartographie article {display:flex;}
-#map {
-  width: 75%;
-  min-height: 80vh;
-}
-
-#infoStation {
-   width: 25%;
-   background-color: #00EAB5;
-   color: #355070;
-   padding: 1em;
-   /* display: none; */
-   flex-direction: column;
-   justify-content: flex-start;
-   z-index:999;
-}
-
-#infoStation h2 {
-   margin-left: .5em;
-   font-size: 1.8em;
-   color: #355070;
-}
-
-#listeInfo {
-   list-style-type: none;
-   margin: 1em 0;
-   padding-left: 1em;
-}
-
-#infoBeforeBooking {
-  margin: 2em 1.5em 1em .8em;
-}
-
-#listeInfo li {
-   font-size: 1em;
-   font-weight: bold;
-   margin: 1em 0;
-}
-
-#listeInfo li + li {
-   margin-top: 1em;
-}
-
-#listeInfo span {
-   font-weight: 300;
-   color: #464646;
-   font-size: 1em;
-}
-form {
-  display: flex;
-  flex-direction: column;
-}
-form label {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
-  border: 0;
-}
-input[type="text"] {
-  width: 280px;
-  border-bottom: 3px solid #fff;
-  background: #00EAB5;
-  margin: 0 0 5px;
-  padding: 10px;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  font-size: .9em;
-  font-weight: bold;
-  color: #454545;
-}
-input[type="text"]:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
-  border-bottom: 3px solid #aaa;
-}
-input:required {
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 3px solid #fff;
-  box-shadow: none;
-}
 abbr {
     font-size: .8em;
     vertical-align: top;
@@ -110,12 +16,7 @@ canvas {
   height:150px;
   border: 1px solid #fff;
 } */
-#reservationBlock {
-  padding-left: 1em;
-}
-#reservationBlock h2 {
-  margin-left: 0;
-}
+
 #buttonReserv {padding-left:1em;}
 #buttonReserv button, #buttonValid button, #buttonClear button, #buttonCancel button {
     /* display: inline-block; */
