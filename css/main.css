@@ -271,32 +271,82 @@ Map and station info
       white-space: nowrap;
       /* added line */
       border: 0; }
+  .map__input[type="text"] {
+    width: 280px;
+    border-bottom: 3px solid #fff;
+    background: #00EAB5;
+    margin: 0 0 5px;
+    padding: 10px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: .9em;
+    font-weight: bold;
+    color: #454545; }
+  .map__input[type="text"]:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border-bottom: 3px solid #aaa; }
+  .map__input:required {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #fff;
+    box-shadow: none; }
 
-input[type="text"] {
-  width: 280px;
-  border-bottom: 3px solid #fff;
-  background: #00EAB5;
-  margin: 0 0 5px;
-  padding: 10px;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  font-size: .9em;
+abbr {
+  font-size: .8em;
+  vertical-align: top;
+  color: #f15e5e;
+  cursor: pointer; }
+
+canvas {
+  cursor: crosshair;
+  border: 1px dotted #fff;
+  border-bottom: 3px solid #fff; }
+
+#buttonReserv {
+  padding-left: 1em; }
+
+#buttonReserv button,
+#buttonValid button,
+#buttonClear button,
+#buttonCancel button {
+  color: #454545;
+  padding: 1em 2em;
+  border: 2px solid #454545;
+  cursor: pointer;
   font-weight: bold;
-  color: #454545; }
+  background: #00EAB5; }
 
-input[type="text"]:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
-  border-bottom: 3px solid #aaa; }
+#buttonReserv button:hover,
+#buttonValid button:hover,
+#buttonClear button:hover,
+#buttonCancel button:hover {
+  border: 2px solid #eee; }
 
-input:required {
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 3px solid #fff;
-  box-shadow: none; }
+#errorReserv,
+#missingInfo {
+  width: 80%;
+  font-size: .9em;
+  border-left: 5px solid #f15e5e;
+  padding-left: 1em;
+  margin: 2em 0 2em 1em; }
+
+#reservationValide {
+  width: 80%;
+  font-size: .9em;
+  border-left: 5px solid #9700f1;
+  padding-left: 1em;
+  margin: 2em 0 2em 0; }
+
+#reservationTimer {
+  color: #9700f1;
+  font-weight: bold; }
+
+#stationReservation {
+  color: #9700f1; }
 
 .footer {
   background: #757575;

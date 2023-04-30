@@ -13,8 +13,8 @@ Map and station info
     
     &__info { // Station information
         width: 25%;
-        background-color: #00EAB5;
-        color: #355070;
+        background-color: $background-color;
+        color: $text-color;
         padding: 1em;
         /* display: none; */
         flex-direction: column;
@@ -31,7 +31,7 @@ Map and station info
             margin: 2em 1.5em 1em .8em;
         }
     }
-
+    
     &__station {
         list-style-type: none;
         margin: 1em 0;
@@ -61,12 +61,12 @@ Map and station info
             margin-left: 0;
         }
     }
-
+    
     // Form field, and rent a bike
     &__form {
         display: flex;
         flex-direction: column;
-
+        
         .map__label {
             position: absolute;
             width: 1px;
@@ -79,33 +79,96 @@ Map and station info
             border: 0;
         }
     }
+    
+    &__input[type="text"] {
+        width: 280px;
+        border-bottom: 3px solid #fff;
+        background: $background-color;
+        margin: 0 0 5px;
+        padding: 10px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        font-size: .9em;
+        font-weight: bold;
+        color: $station-color;
+    }
+    
+    &__input[type="text"]:hover {
+        -webkit-transition: border-color 0.3s ease-in-out;
+        -moz-transition: border-color 0.3s ease-in-out;
+        transition: border-color 0.3s ease-in-out;
+        border-bottom: 3px solid #aaa;
+    }
+    
+    &__input:required {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 3px solid #fff;
+        box-shadow: none;
+    }
 }
 
+abbr {
+    font-size: .8em;
+    vertical-align: top;
+    color: $error-color;
+    cursor: pointer;
+}
 
-
-input[type="text"] {
-    width: 280px;
+canvas {
+    cursor: crosshair;
+    border: 1px dotted #fff;
     border-bottom: 3px solid #fff;
-    background: #00EAB5;
-    margin: 0 0 5px;
-    padding: 10px;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    font-size: .9em;
+}
+
+// To do : refactoring and optimize
+#buttonReserv {
+    padding-left:1em;
+}
+
+#buttonReserv button, 
+#buttonValid button, 
+#buttonClear button, 
+#buttonCancel button {
+    color:$station-color;
+    padding: 1em 2em;
+    border: 2px solid $station-color;
+    cursor: pointer;
     font-weight: bold;
-    color: #454545;
+    background: $background-color;
 }
-input[type="text"]:hover {
-    -webkit-transition: border-color 0.3s ease-in-out;
-    -moz-transition: border-color 0.3s ease-in-out;
-    transition: border-color 0.3s ease-in-out;
-    border-bottom: 3px solid #aaa;
+
+#buttonReserv button:hover, 
+#buttonValid button:hover, 
+#buttonClear button:hover, 
+#buttonCancel button:hover {
+    border: 2px solid #eee;
 }
-input:required {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 3px solid #fff;
-    box-shadow: none;
+
+#errorReserv, 
+#missingInfo {
+  width: 80%;
+  font-size: .9em;
+  border-left: 5px solid $error-color;
+  padding-left: 1em;
+  margin: 2em 0 2em 1em;
+}
+
+#reservationValide {
+  width: 80%;
+  font-size: .9em;
+  border-left: 5px solid $accent-color;
+  padding-left: 1em;
+  margin: 2em 0 2em 0;
+}
+
+#reservationTimer {
+  color: $accent-color;
+  font-weight: bold;
+}
+
+#stationReservation {
+  color: $accent-color;
 }
