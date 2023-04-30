@@ -39,20 +39,19 @@ section {
     background-color: #38353A;
     color: #355070; }
 
-p {
-  font-size: 1.2em;
-  line-height: 1.6em;
-  font-weight: 400; }
-
+p,
+a,
 address {
   font-size: 1.2em;
   line-height: 1.6em;
   font-weight: 400; }
+  @media (max-width: 30em) {
+    p,
+    a,
+    address {
+      font-size: 1em; } }
 
 a {
-  font-size: 1.2em;
-  line-height: 1.6em;
-  font-weight: 400;
   color: #fdfdfd;
   text-decoration: underline; }
   a:hover {
@@ -66,6 +65,10 @@ h1 {
   text-transform: uppercase;
   font-weight: 800;
   color: #355070; }
+  @media (max-width: 30em) {
+    h1 {
+      font-size: 2em;
+      line-height: 1em; } }
 
 h2 {
   font-family: "Spectral", Georgia, serif;
@@ -74,12 +77,18 @@ h2 {
   text-transform: uppercase;
   font-weight: 500;
   color: #fdfdfd; }
+  @media (max-width: 30em) {
+    h2 {
+      font-size: 1.4em; } }
 
 h3 {
   font-family: "Spectral", Georgia, serif;
   font-size: 1.2em;
   line-height: 1.4em;
   font-weight: 700; }
+  @media (max-width: 30em) {
+    h3 {
+      font-size: 1.4em; } }
 
 h4 {
   font-family: "Spectral", Georgia, serif; }
@@ -91,6 +100,9 @@ h4 {
   z-index: 9999;
   padding: 1em 0;
   background: transparent; }
+  @media (max-width: 30em) {
+    .mainHeader {
+      padding: 1em 1em 0 0; } }
   .mainHeader__title {
     color: #355070;
     font-size: 3.5em;
@@ -102,6 +114,15 @@ h4 {
       text-transform: none;
       letter-spacing: .3em;
       color: #514E53; }
+      @media (max-width: 30em) {
+        .mainHeader__title--subtitle {
+          font-size: 45%;
+          letter-spacing: .1em; } }
+    @media (max-width: 30em) {
+      .mainHeader__title {
+        font-size: 2em;
+        letter-spacing: .1em;
+        line-height: 1.2em; } }
 
 /* ********************
 
@@ -112,6 +133,9 @@ Slideshow
   position: relative;
   height: 110vh;
   margin: 0 auto; }
+  @media (max-width: 30em) {
+    .diaporama {
+      height: 100vh; } }
   .diaporama .diaporama__slide {
     display: inline-block;
     height: 110vh;
@@ -120,6 +144,9 @@ Slideshow
     max-width: 1200px;
     margin: 0;
     transition: all 2s; }
+    @media (max-width: 30em) {
+      .diaporama .diaporama__slide {
+        height: 100vh; } }
     .diaporama .diaporama__slide h2 {
       color: #355070; }
     .diaporama .diaporama__slide img {
@@ -136,6 +163,12 @@ Slideshow
       height: 40%;
       right: 20%;
       top: 35%; }
+      @media (max-width: 30em) {
+        .diaporama .diaporama__slide:nth-of-type(4n) img {
+          display: none; } }
+    @media (max-width: 30em) {
+      .diaporama .diaporama__slide:nth-of-type(1n) img {
+        opacity: .5; } }
     .diaporama .diaporama__slide + figure {
       opacity: 0; }
   .diaporama .diaporama__figcaption {
@@ -146,6 +179,11 @@ Slideshow
     width: 40%;
     height: 100%;
     font-size: 120%; }
+    @media (max-width: 30em) {
+      .diaporama .diaporama__figcaption {
+        width: 70%;
+        font-size: 100%;
+        padding-top: 3em; } }
     .diaporama .diaporama__figcaption h2, .diaporama .diaporama__figcaption p {
       z-index: 2; }
   .diaporama #arrowLeft, .diaporama #arrowRight {
@@ -155,8 +193,14 @@ Slideshow
     cursor: pointer; }
   .diaporama #arrowLeft {
     left: 2.5em; }
+    @media (max-width: 30em) {
+      .diaporama #arrowLeft {
+        right: 1.2em; } }
   .diaporama #arrowRight {
     right: 1em; }
+    @media (max-width: 30em) {
+      .diaporama #arrowRight {
+        right: 1em; } }
   .diaporama #arrowLeft > .arrow-left {
     height: 30px;
     width: 30px;
@@ -166,6 +210,12 @@ Slideshow
     -ms-transform: translate(-20%, -50%) rotate(225deg);
     -o-transform: translate(-20%, -50%) rotate(225deg);
     transform: translate(-20%, -50%) rotate(225deg); }
+    @media (max-width: 30em) {
+      .diaporama #arrowLeft > .arrow-left {
+        height: 15px;
+        width: 15px;
+        border-top: 4px solid #454545;
+        border-right: 4px solid #454545; } }
   .diaporama #arrowRight > .arrow-right {
     height: 30px;
     width: 30px;
@@ -175,19 +225,33 @@ Slideshow
     -ms-transform: translate(-70%, -50%) rotate(45deg);
     -o-transform: translate(-70%, -50%) rotate(45deg);
     transform: translate(-70%, -50%) rotate(45deg); }
+    @media (max-width: 30em) {
+      .diaporama #arrowRight > .arrow-right {
+        height: 15px;
+        width: 15px;
+        border-top: 4px solid #454545;
+        border-right: 4px solid #454545; } }
   .diaporama #control {
     position: absolute;
     z-index: 2;
     top: 85%;
     left: 47%; }
+    @media (max-width: 30em) {
+      .diaporama #control {
+        top: 90%;
+        left: 40%; } }
   .diaporama #pauseSlide {
     background: transparent;
     padding: 0;
     border: none; }
-  .diaporama img.arrow_down, .diaporama #pauseSlide {
+  .diaporama img.arrow_down,
+  .diaporama #pauseSlide {
     display: inline-block;
-    /* width: 30px; */
     cursor: pointer; }
+  @media (max-width: 30em) {
+    .diaporama img.arrow_down,
+    .diaporama #pauseSlideImg {
+      width: 30px; } }
   .diaporama button.controls > span {
     position: absolute;
     width: 1px;
@@ -216,14 +280,21 @@ Slideshow
 
 /* ********************
 
-Map and station info
+Map, station and reservation
 
 ******************** */
 .map {
   display: flex; }
+  @media (max-width: 30em) {
+    .map {
+      flex-direction: column;
+      overflow-x: hidden; } }
   .map__embed {
     width: 75%;
     min-height: 80vh; }
+    @media (max-width: 30em) {
+      .map__embed {
+        width: 100%; } }
   .map__info {
     width: 25%;
     background-color: #00EAB5;
@@ -233,16 +304,32 @@ Map and station info
     flex-direction: column;
     justify-content: flex-start;
     z-index: 999; }
+    @media (max-width: 30em) {
+      .map__info {
+        width: 100%;
+        padding: 2em 0 2em 2em; } }
     .map__info h2 {
       margin-left: .5em;
       font-size: 1.8em;
       color: #355070; }
+      @media (max-width: 30em) {
+        .map__info h2 {
+          margin-left: 0;
+          font-size: 1.8em; } }
     .map__info > p {
       margin: 2em 1.5em 1em .8em; }
+      @media (max-width: 30em) {
+        .map__info > p {
+          margin: 2em 5em 2em 0; } }
   .map__station {
     list-style-type: none;
     margin: 1em 0;
     padding-left: 1em; }
+    @media (max-width: 30em) {
+      .map__station {
+        padding-left: 0;
+        padding-right: 2em;
+        font-size: 80%; } }
     .map__station li {
       font-size: 1em;
       font-weight: bold;
@@ -255,6 +342,9 @@ Map and station info
       font-size: 1em; }
   .map__reserv {
     padding-left: 1em; }
+    @media (max-width: 30em) {
+      .map__reserv {
+        padding-left: 0; } }
     .map__reserv h2 {
       margin-left: 0; }
   .map__form {
@@ -283,6 +373,9 @@ Map and station info
     font-size: .9em;
     font-weight: bold;
     color: #454545; }
+    @media (max-width: 30em) {
+      .map__input[type="text"] {
+        width: 200px; } }
   .map__input[type="text"]:hover {
     -webkit-transition: border-color 0.3s ease-in-out;
     -moz-transition: border-color 0.3s ease-in-out;
@@ -308,6 +401,9 @@ canvas {
 
 #buttonReserv {
   padding-left: 1em; }
+  @media (max-width: 30em) {
+    #buttonReserv {
+      padding-left: 0; } }
 
 #buttonReserv button,
 #buttonValid button,
@@ -352,11 +448,20 @@ canvas {
   background: #757575;
   color: #fdfdfd;
   padding: 6em 4em; }
+  @media (max-width: 30em) {
+    .footer {
+      padding: 2em; } }
   .footer__content {
     display: flex; }
+    @media (max-width: 30em) {
+      .footer__content {
+        flex-direction: column; } }
   .footer__list {
     list-style: none;
     padding-left: 0;
     margin-right: 6em; }
+    @media (max-width: 30em) {
+      .footer__list {
+        margin-right: 1em; } }
 
 /*# sourceMappingURL=main.css.map */

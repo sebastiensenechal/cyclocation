@@ -2,15 +2,27 @@
     background:#757575;
     color:#fdfdfd;
     padding:6em 4em;
+
+    @media (max-width: 30em) {
+        padding: 2em;
+    }
     
     &__content {
         display: flex;
+
+        @media (max-width: 30em) {
+            flex-direction: column;
+        }
     }
     
     &__list {
         list-style: none;
         padding-left: 0;
         margin-right: 6em;
+
+        @media (max-width: 30em) {
+            margin-right: 1em;
+        }
     }
 }
 
