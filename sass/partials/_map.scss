@@ -71,6 +71,10 @@ Map, station and reservation
                 margin: 2em 5em 2em 0;
             }
         }
+
+        @media screen and (min-width: 48em) and (max-width: 71.25em) {
+            width:30%;
+        }
     }
     
     &__station {

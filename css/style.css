@@ -6,20 +6,6 @@
 
  ****************/
 
-/* Ecrans ordinaires à grands (HD) */
-@media screen and (min-width: 48em) and (max-width: 71.25em) {
-  #mainHeader h1 {font-size:3em;}
-  #diaporama figcaption {
-    width: 40%;
-    height: 110%;
-   }
-  #diaporama, #diaporama figure {height: 110vh;}
-  #diaporama figure img {opacity: .7;}
-  p, address, a {font-size: 1em;}
-  h2 {font-size:1.8em;}
-  #infoStation {width:30%;}
-}
-
 @media screen and (orientation: portrait) {
   #cartographie article {
     flex-direction:column;

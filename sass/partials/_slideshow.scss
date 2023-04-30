@@ -11,6 +11,10 @@ Slideshow
     @media (max-width: 30em) {
         height: 100vh;
     }
+
+    @media screen and (min-width: 48em) and (max-width: 71.25em) {
+        height: 110vh;
+    }
     
     .diaporama__slide {
         display:inline-block;
@@ -28,6 +32,10 @@ Slideshow
         @media screen and (min-width: 30em) and (max-width: 48em) {
             height: 130vh;
         }
+
+        @media screen and (min-width: 48em) and (max-width: 71.25em) {
+            height: 110vh;
+        }
         
         & h2 {
             color: $text-color;
@@ -39,6 +47,10 @@ Slideshow
             right: 0;
             /* width: 40%; */
             height: 100%;
+
+            @media screen and (min-width: 48em) and (max-width: 71.25em) {
+                opacity: .7;
+            }
         }
         
         &:nth-of-type(2n) img {
@@ -94,6 +106,11 @@ Slideshow
         @media screen and (min-width: 30em) and (max-width: 48em) {
             width: 50%;
             font-size: 100%;
+        }
+
+        @media screen and (min-width: 48em) and (max-width: 71.25em) {
+            width: 40%;
+            height: 110%;
         }
         
         & h2, 
