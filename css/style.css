@@ -6,48 +6,6 @@
 
  ****************/
 
-/* Tablettes et écrans moyens */
-@media screen and (min-width: 30em) and (max-width: 48em) {
-  #mainHeader h1 span {display: none;}
-  #diaporama, #diaporama figure {
-    height: 130vh;
-  }
-  #diaporama figcaption {
-    width: 50%;
-    font-size: 100%;
-    left: 11%;
-   }
-  section header {
-    padding-left: 5em;
-  }
-  #cartographie article {
-    flex-direction:column;
-    overflow-x: hidden;
-  }
-  #map {
-    width: 100%;
-  }
-  #infoStation {
-    width:100%;
-  }
-  #infoStation h2 {
-    text-align: left;
-    margin: .4em;
-  }
-  #listeInfo {
-    padding-left: 1em;
-  }
-  footer {
-    padding: 5em;
-  }
-  footer article {
-    flex-direction: column;
-  }
-  footer ul {
-    margin-right: 1em;
-  }
-}
-
 /* Ecrans ordinaires à grands (HD) */
 @media screen and (min-width: 48em) and (max-width: 71.25em) {
   #mainHeader h1 {font-size:3em;}

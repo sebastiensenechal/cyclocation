@@ -9,12 +9,21 @@
     @media (max-width: 30em) {
         padding: 1em 1em 0 0;
     }
+
+    @media screen and (min-width: 30em) and (max-width: 48em) {
+        padding: 1em 5em 0 0;
+    }
     
     &__title {
         color: $text-color;
         font-size: 3.5em;
         letter-spacing: .5em;
         line-height: 1em;
+
+        @media screen and (min-width: 30em) and (max-width: 48em) {
+            font-size: 2.8em;
+            line-height: 1.4em;
+        }
         
         &--subtitle {
             font-size: 30%;
@@ -26,6 +35,10 @@
             @media (max-width: 30em) {
                 font-size: 45%;
                 letter-spacing: .1em;
+            }
+
+            @media screen and (min-width: 30em) and (max-width: 48em) {
+                display: none;
             }
         }
         

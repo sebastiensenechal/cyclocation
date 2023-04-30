@@ -103,11 +103,18 @@ h4 {
   @media (max-width: 30em) {
     .mainHeader {
       padding: 1em 1em 0 0; } }
+  @media screen and (min-width: 30em) and (max-width: 48em) {
+    .mainHeader {
+      padding: 1em 5em 0 0; } }
   .mainHeader__title {
     color: #355070;
     font-size: 3.5em;
     letter-spacing: .5em;
     line-height: 1em; }
+    @media screen and (min-width: 30em) and (max-width: 48em) {
+      .mainHeader__title {
+        font-size: 2.8em;
+        line-height: 1.4em; } }
     .mainHeader__title--subtitle {
       font-size: 30%;
       font-weight: 500;
@@ -118,6 +125,9 @@ h4 {
         .mainHeader__title--subtitle {
           font-size: 45%;
           letter-spacing: .1em; } }
+      @media screen and (min-width: 30em) and (max-width: 48em) {
+        .mainHeader__title--subtitle {
+          display: none; } }
     @media (max-width: 30em) {
       .mainHeader__title {
         font-size: 2em;
@@ -147,6 +157,9 @@ Slideshow
     @media (max-width: 30em) {
       .diaporama .diaporama__slide {
         height: 100vh; } }
+    @media screen and (min-width: 30em) and (max-width: 48em) {
+      .diaporama .diaporama__slide {
+        height: 130vh; } }
     .diaporama .diaporama__slide h2 {
       color: #355070; }
     .diaporama .diaporama__slide img {
@@ -166,9 +179,15 @@ Slideshow
       @media (max-width: 30em) {
         .diaporama .diaporama__slide:nth-of-type(4n) img {
           display: none; } }
+      @media screen and (min-width: 30em) and (max-width: 48em) {
+        .diaporama .diaporama__slide:nth-of-type(4n) img {
+          display: none; } }
     @media (max-width: 30em) {
       .diaporama .diaporama__slide:nth-of-type(1n) img {
-        opacity: .5; } }
+        opacity: 0.5; } }
+    @media screen and (min-width: 30em) and (max-width: 48em) {
+      .diaporama .diaporama__slide:nth-of-type(1n) img {
+        opacity: 0.7; } }
     .diaporama .diaporama__slide + figure {
       opacity: 0; }
   .diaporama .diaporama__figcaption {
@@ -184,6 +203,10 @@ Slideshow
         width: 70%;
         font-size: 100%;
         padding-top: 3em; } }
+    @media screen and (min-width: 30em) and (max-width: 48em) {
+      .diaporama .diaporama__figcaption {
+        width: 50%;
+        font-size: 100%; } }
     .diaporama .diaporama__figcaption h2, .diaporama .diaporama__figcaption p {
       z-index: 2; }
   .diaporama #arrowLeft, .diaporama #arrowRight {
@@ -289,10 +312,17 @@ Map, station and reservation
     .map {
       flex-direction: column;
       overflow-x: hidden; } }
+  @media screen and (min-width: 30em) and (max-width: 48em) {
+    .map {
+      flex-direction: column;
+      overflow-x: hidden; } }
   .map__embed {
     width: 75%;
     min-height: 80vh; }
     @media (max-width: 30em) {
+      .map__embed {
+        width: 100%; } }
+    @media screen and (min-width: 30em) and (max-width: 48em) {
       .map__embed {
         width: 100%; } }
   .map__info {
@@ -308,6 +338,9 @@ Map, station and reservation
       .map__info {
         width: 100%;
         padding: 2em 0 2em 2em; } }
+    @media screen and (min-width: 30em) and (max-width: 48em) {
+      .map__info {
+        width: 100%; } }
     .map__info h2 {
       margin-left: .5em;
       font-size: 1.8em;
@@ -316,6 +349,10 @@ Map, station and reservation
         .map__info h2 {
           margin-left: 0;
           font-size: 1.8em; } }
+      @media screen and (min-width: 30em) and (max-width: 48em) {
+        .map__info h2 {
+          text-align: left;
+          margin: .4em; } }
     .map__info > p {
       margin: 2em 1.5em 1em .8em; }
       @media (max-width: 30em) {
@@ -330,6 +367,9 @@ Map, station and reservation
         padding-left: 0;
         padding-right: 2em;
         font-size: 80%; } }
+    @media screen and (min-width: 30em) and (max-width: 48em) {
+      .map__station {
+        padding-left: 1em; } }
     .map__station li {
       font-size: 1em;
       font-weight: bold;
@@ -451,9 +491,15 @@ canvas {
   @media (max-width: 30em) {
     .footer {
       padding: 2em; } }
+  @media screen and (min-width: 30em) and (max-width: 48em) {
+    .footer {
+      padding: 2em; } }
   .footer__content {
     display: flex; }
     @media (max-width: 30em) {
+      .footer__content {
+        flex-direction: column; } }
+    @media screen and (min-width: 30em) and (max-width: 48em) {
       .footer__content {
         flex-direction: column; } }
   .footer__list {
@@ -461,6 +507,9 @@ canvas {
     padding-left: 0;
     margin-right: 6em; }
     @media (max-width: 30em) {
+      .footer__list {
+        margin-right: 1em; } }
+    @media screen and (min-width: 30em) and (max-width: 48em) {
       .footer__list {
         margin-right: 1em; } }
 

@@ -6,11 +6,19 @@
     @media (max-width: 30em) {
         padding: 2em;
     }
+
+    @media screen and (min-width: 30em) and (max-width: 48em) {
+        padding: 2em;
+    }
     
     &__content {
         display: flex;
 
         @media (max-width: 30em) {
+            flex-direction: column;
+        }
+
+        @media screen and (min-width: 30em) and (max-width: 48em) {
             flex-direction: column;
         }
     }
@@ -21,6 +29,10 @@
         margin-right: 6em;
 
         @media (max-width: 30em) {
+            margin-right: 1em;
+        }
+
+        @media screen and (min-width: 30em) and (max-width: 48em) {
             margin-right: 1em;
         }
     }
