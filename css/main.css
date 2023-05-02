@@ -340,6 +340,10 @@ Map, station and reservation
     .map {
       flex-direction: column;
       overflow-x: hidden; } }
+  @media screen and (orientation: portrait) {
+    .map {
+      flex-direction: column;
+      overflow-x: hidden; } }
   .map__embed {
     width: 75%;
     min-height: 80vh; }
@@ -347,6 +351,9 @@ Map, station and reservation
       .map__embed {
         width: 100%; } }
     @media screen and (min-width: 30em) and (max-width: 48em) {
+      .map__embed {
+        width: 100%; } }
+    @media screen and (orientation: portrait) {
       .map__embed {
         width: 100%; } }
   .map__info {
@@ -363,6 +370,9 @@ Map, station and reservation
         width: 100%;
         padding: 2em 0 2em 2em; } }
     @media screen and (min-width: 30em) and (max-width: 48em) {
+      .map__info {
+        width: 100%; } }
+    @media screen and (orientation: portrait) {
       .map__info {
         width: 100%; } }
     .map__info h2 {

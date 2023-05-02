@@ -15,6 +15,11 @@ Map, station and reservation
         flex-direction:column;
         overflow-x: hidden;
     }
+
+    @media screen and (orientation: portrait) {
+        flex-direction:column;
+        overflow-x: hidden;
+    }
     
     &__embed {
         width: 75%;
@@ -25,6 +30,10 @@ Map, station and reservation
         }
         
         @media screen and (min-width: 30em) and (max-width: 48em) {
+            width: 100%;
+        }
+
+        @media screen and (orientation: portrait) {
             width: 100%;
         }
     }
@@ -45,6 +54,10 @@ Map, station and reservation
         }
 
         @media screen and (min-width: 30em) and (max-width: 48em) {
+            width:100%;
+        }
+
+        @media screen and (orientation: portrait) {
             width:100%;
         }
         

@@ -6,19 +6,6 @@
 
  ****************/
 
-@media screen and (orientation: portrait) {
-  #cartographie article {
-    flex-direction:column;
-    overflow-x: hidden;
-  }
-  #map {
-    width: 100%;
-  }
-  #infoStation {
-    width:100%;
-  }
-}
-
 /* Grands écrans */
 @media screen and (min-width: 2560px) and (orientation: landscape) {
   h2 {font-size:4em;}
