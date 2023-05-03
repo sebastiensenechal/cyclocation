@@ -128,15 +128,15 @@ Slideshow
     }
     
     #arrowLeft {
-        left: 2.5em;
+        left: 2em;
         
         @media (max-width: 30em) {
-            right: 1.2em;
+            left: 1.2em;
         }
     }
     
     #arrowRight {
-        right: 1em;
+        right: 3em;
         
         @media (max-width: 30em) {
             right: 1em;
@@ -148,14 +148,14 @@ Slideshow
         width: 30px;
         border-top: 5px solid #454545;
         border-right: 5px solid #454545;
-        -webkit-transform: translate(-20%, -50%) rotate(225deg);
-        -ms-transform: translate(-20%, -50%) rotate(225deg);
-        -o-transform: translate(-20%, -50%) rotate(225deg);
-        transform: translate(-20%, -50%) rotate(225deg);
+        -webkit-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+        -o-transform: rotate(225deg);
+        transform: rotate(225deg);
         
         @media (max-width: 30em) {
-            height: 15px;
-            width: 15px;
+            height: 44px;
+            width: 44px;
             border-top: 4px solid #454545;
             border-right: 4px solid #454545;
         }
@@ -166,14 +166,14 @@ Slideshow
         width: 30px;
         border-top: 5px solid #454545;
         border-right: 5px solid #454545;
-        -webkit-transform: translate(-70%, -50%) rotate(45deg);
-        -ms-transform: translate(-70%, -50%) rotate(45deg);
-        -o-transform: translate(-70%, -50%) rotate(45deg);
-        transform: translate(-70%, -50%) rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
         
         @media (max-width: 30em) {
-            height: 15px;
-            width: 15px;
+            height: 44px;
+            width: 44px;
             border-top: 4px solid #454545;
             border-right: 4px solid #454545;
         }
