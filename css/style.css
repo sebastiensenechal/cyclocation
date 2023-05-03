@@ -1,44 +1,5 @@
 @charset "utf-8";
 
- /***************
-
- RESPONSIVE
-
- ****************/
-
-/* Grands écrans */
-@media screen and (min-width: 2560px) and (orientation: landscape) {
-  h2 {font-size:4em;}
-  #mainHeader h1 {
-    font-size: 6em;
-  }
-  p {font-size:2em;}
-  #infoStation h2 {
-    margin-left: .5em;
-    margin-bottom: 1.5em;
-    font-size: 3.5em;
-  }
-  #listeInfo li {
-    font-size: 1.6em;
-    margin: 2em 0;
-  }
-  #buttonReserv button, #buttonValid button, #buttonClear button, #buttonCancel button {
-    padding: .8em 1.6em;
-    font-size: 1.6em;
-  }
-  #reservationBlock {
-    max-width: 90%;
-  }
-  input[type="text"] {
-    width: 80%;
-    padding: .6em;
-    font-size: 1.4em;
-  }
-  footer li {font-size:2em;}
-  footer a {font-size:1em;}
-}
-
-
 /* Print */
 @media print {
 

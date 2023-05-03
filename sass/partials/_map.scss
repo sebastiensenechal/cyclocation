@@ -39,7 +39,7 @@ Map, station and reservation
     }
     
     &__info { // Station information
-        width: 25%;
+        width: 30%;
         background-color: $background-color;
         color: $text-color;
         padding: 1em;
@@ -60,6 +60,10 @@ Map, station and reservation
         @media screen and (orientation: portrait) {
             width:100%;
         }
+
+        @media screen and (min-width: 48em) and (max-width: 71.25em) and (orientation: landscape) {
+            width:35%;
+        }
         
         & h2 {
             margin-left: .5em;
@@ -75,6 +79,12 @@ Map, station and reservation
                 text-align: left;
                 margin: .4em;
             }
+
+            @media screen and (min-width: 2560px) and (orientation: landscape) {
+                  margin-left: .3em;
+                  margin-bottom: 1.5em;
+                  font-size: 3.5em;
+            }
         }
         
         & > p {
@@ -83,10 +93,6 @@ Map, station and reservation
             @media (max-width: 30em) {
                 margin: 2em 5em 2em 0;
             }
-        }
-
-        @media screen and (min-width: 48em) and (max-width: 71.25em) {
-            width:30%;
         }
     }
     
@@ -106,9 +112,11 @@ Map, station and reservation
         }
         
         & li {
-            font-size: 1em;
-            font-weight: bold;
             margin: 1em 0;
+
+            @media screen and (min-width: 2560px) and (orientation: landscape) {
+                margin: 2em 0;
+            }
         }
         
         & li + li {
@@ -116,9 +124,7 @@ Map, station and reservation
         }
         
         & span {
-            font-weight: 300;
             color: #464646;
-            font-size: 1em;
         }
     }
     
@@ -127,6 +133,10 @@ Map, station and reservation
         
         @media (max-width: 30em) {
             padding-left: 0;
+        }
+
+        @media screen and (min-width: 2560px) and (orientation: landscape) {
+            max-width: 90%;
         }
         
         & h2 {
@@ -167,6 +177,12 @@ Map, station and reservation
         
         @media (max-width: 30em) {
             width: 200px;
+        }
+
+        @media screen and (min-width: 2560px) and (orientation: landscape) {
+            width: 80%;
+            padding: .6em;
+            font-size: 1.4em;
         }
     }
     
@@ -218,6 +234,11 @@ canvas {
     cursor: pointer;
     font-weight: bold;
     background: $background-color;
+
+    @media screen and (min-width: 2560px) and (orientation: landscape) {
+        padding: .8em 1.6em;
+        font-size: 1.6em;
+    }
 }
 
 #buttonReserv button:hover, 
