@@ -1,8 +1,8 @@
 @charset "utf-8";
-@import 'partials/variables';
-@import 'partials/global'; 
-@import 'partials/typography';
-@import 'partials/header'; 
-@import 'partials/slideshow';
-@import 'partials/map';
-@import 'partials/footer';
+@import 'utils/variables';
+@import 'base/global'; 
+@import 'base/typography';
+@import 'layout/header'; 
+@import 'layout/slideshow';
+@import 'layout/map';
+@import 'layout/footer';
