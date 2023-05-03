@@ -20,6 +20,11 @@ Map, station and reservation
         flex-direction:column;
         overflow-x: hidden;
     }
+
+    @media print and (orientation: portrait) {
+        flex-direction:column;
+        overflow-x: hidden;
+    }
     
     &__embed {
         width: 75%;
@@ -35,6 +40,11 @@ Map, station and reservation
 
         @media screen and (orientation: portrait) {
             width: 100%;
+        }
+
+        @media print and (orientation: portrait) {
+            width:100%;
+            min-height: 60vh;
         }
     }
     
@@ -64,15 +74,17 @@ Map, station and reservation
         @media screen and (min-width: 48em) and (max-width: 71.25em) and (orientation: landscape) {
             width:35%;
         }
+
+        @media print and (orientation: portrait) {
+            width:100%;
+        }
         
         & h2 {
             margin-left: .5em;
-            font-size: 1.8em;
             color: $text-color;
             
             @media (max-width: 30em) {
                 margin-left: 0;
-                font-size:1.8em;
             }
 
             @media screen and (min-width: 30em) and (max-width: 48em) {
@@ -83,7 +95,6 @@ Map, station and reservation
             @media screen and (min-width: 2560px) and (orientation: landscape) {
                   margin-left: .3em;
                   margin-bottom: 1.5em;
-                  font-size: 3.5em;
             }
         }
         

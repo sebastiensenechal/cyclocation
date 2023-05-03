@@ -91,9 +91,6 @@ h2 {
   text-transform: uppercase;
   font-weight: 500;
   color: #fdfdfd; }
-  @media (max-width: 30em) {
-    h2 {
-      font-size: 1.8em; } }
   @media screen and (min-width: 48em) and (max-width: 71.25em) {
     h2 {
       font-size: 1.8em; } }
@@ -131,6 +128,11 @@ h4 {
     font-size: 3.5em;
     letter-spacing: .5em;
     line-height: 1em; }
+    @media (max-width: 30em) {
+      .mainHeader__title {
+        font-size: 2.8em;
+        letter-spacing: .1em;
+        line-height: 1.2em; } }
     @media screen and (min-width: 30em) and (max-width: 48em) {
       .mainHeader__title {
         font-size: 2.8em;
@@ -149,16 +151,10 @@ h4 {
       color: #514E53; }
       @media (max-width: 30em) {
         .mainHeader__title--subtitle {
-          font-size: 45%;
           letter-spacing: .1em; } }
       @media screen and (min-width: 30em) and (max-width: 48em) {
         .mainHeader__title--subtitle {
           display: none; } }
-    @media (max-width: 30em) {
-      .mainHeader__title {
-        font-size: 2em;
-        letter-spacing: .1em;
-        line-height: 1.2em; } }
 
 /* ********************
 
@@ -359,6 +355,10 @@ Map, station and reservation
     .map {
       flex-direction: column;
       overflow-x: hidden; } }
+  @media print and (orientation: portrait) {
+    .map {
+      flex-direction: column;
+      overflow-x: hidden; } }
   .map__embed {
     width: 75%;
     min-height: 80vh; }
@@ -371,6 +371,10 @@ Map, station and reservation
     @media screen and (orientation: portrait) {
       .map__embed {
         width: 100%; } }
+    @media print and (orientation: portrait) {
+      .map__embed {
+        width: 100%;
+        min-height: 60vh; } }
   .map__info {
     width: 30%;
     background-color: #00EAB5;
@@ -393,14 +397,15 @@ Map, station and reservation
     @media screen and (min-width: 48em) and (max-width: 71.25em) and (orientation: landscape) {
       .map__info {
         width: 35%; } }
+    @media print and (orientation: portrait) {
+      .map__info {
+        width: 100%; } }
     .map__info h2 {
       margin-left: .5em;
-      font-size: 1.8em;
       color: #355070; }
       @media (max-width: 30em) {
         .map__info h2 {
-          margin-left: 0;
-          font-size: 1.8em; } }
+          margin-left: 0; } }
       @media screen and (min-width: 30em) and (max-width: 48em) {
         .map__info h2 {
           text-align: left;
@@ -408,8 +413,7 @@ Map, station and reservation
       @media screen and (min-width: 2560px) and (orientation: landscape) {
         .map__info h2 {
           margin-left: .3em;
-          margin-bottom: 1.5em;
-          font-size: 3.5em; } }
+          margin-bottom: 1.5em; } }
     .map__info > p {
       margin: 2em 1.5em 1em .8em; }
       @media (max-width: 30em) {
@@ -583,5 +587,8 @@ canvas {
     @media screen and (min-width: 30em) and (max-width: 48em) {
       .footer__list {
         margin-right: 1em; } }
+    @media (max-width: 30em) {
+      .footer__list li {
+        line-height: 3em; } }
 
 /*# sourceMappingURL=main.css.map */

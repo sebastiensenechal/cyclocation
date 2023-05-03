@@ -35,6 +35,12 @@
         @media screen and (min-width: 30em) and (max-width: 48em) {
             margin-right: 1em;
         }
+
+        & li {
+            @media (max-width: 30em) {
+                line-height: 3em;
+            }
+        }
     }
 }
 
