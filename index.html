@@ -10,21 +10,20 @@
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="Cyclo-location" />
         <meta name="twitter:creator" content="Sébastien Sénéchal" />
-        <meta property="og:url" content="https://sebastiensenechal.com/openclassroom/cyclocation/" />
+        <meta property="og:url" content="https://localhost/cyclocation/" />
         <meta property="og:title" content="Cyclo location | Réserve ton vélo en quelques cliques" />
         <meta property="og:description" content="Réserve ton vélo en moins d'une minute, où que tu sois !" />
-        <meta property="og:image" content="https://sebastiensenechal.com/openclassroom/cyclocation/img/topo2.png" />
+        <meta property="og:image" content="public/img/topo2.png" />
         <!-- Open Graph -->
         <meta property="og:title" content="Cyclo location | Réserve ton vélo en quelques cliques" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sebastiensenechal.com/openclassroom/cyclocation/" />
-        <meta property="og:image" content="https://sebastiensenechal.com/openclassroom/cyclocation/img/topo2.png" />
-        <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+        <meta property="og:url" content="https://localhost/cyclocation/" />
+        <meta property="og:image" content="public/img/topo2.png" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <!-- Feuilles de style -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
-        <link rel="stylesheet" href="css/style.css">
-        <!-- Compile SASS in CSS -->
-        <link rel="stylesheet" href="css/main.css">
+        <!-- SASS to CSS -->
+        <link rel="stylesheet" href="public/css/main.min.css">
     </head>
 
     <body>
@@ -42,7 +41,7 @@
                     </div>
 
                     <figure class="slide diaporama__slide" id="slide1">
-                      <img src="img/roue-velo-blanc.svg" alt="">
+                      <img src="public/img/roue-velo-blanc.svg" alt="">
                         <figcaption class="slide__figcaption diaporama__figcaption">
                           <h2>Comment ça marche&nbsp;?</h2>
                           <p>Nous avons conçu ce service pour une utilisation tous terrains.<br>
@@ -51,7 +50,7 @@
                     </figure>
 
                     <figure class="slide diaporama__slide" id="slide2">
-                        <img src="img/markers-fig2.png" alt="">
+                        <img src="public/img/markers-fig2.png" alt="">
                         <figcaption class="slide__figcaption diaporama__figcaption">
                             <h2>Carte simplifiée</h2>
                             <p>Déplace toi sur la carte ci-dessous et sélectionne une station.</p>
@@ -59,7 +58,7 @@
                     </figure>
 
                     <figure class="slide diaporama__slide" id="slide3">
-                        <img src="img/topo-jaune.svg" alt="">
+                        <img src="public/img/topo-jaune.svg" alt="">
                         <figcaption class="slide__figcaption diaporama__figcaption">
                             <h2>Choisi ta station</h2>
                             <p>&Eacute;tat de la station, ouverte ou fermée<br>
@@ -69,7 +68,7 @@
                     </figure>
 
                     <figure class="slide diaporama__slide" id="slide4">
-                        <img src="img/reserver.png" alt="">
+                        <img src="public/img/reserver.png" alt="">
                         <figcaption class="slide__figcaption diaporama__figcaption">
                             <h2>Réserve / Annule</h2>
                             <p>Clique sur &laquo;Réserver&raquo;, renseigne ton prénom, ton nom et signe.<br>
@@ -82,8 +81,8 @@
                     </div>
 
                     <div id="control">
-                      <button class="controls" id="pauseSlide"><span>Mettre en pause le diaporama</span><img src="img/pause.svg" alt="" id="pauseSlideImg" /></button>
-                      <a href="#cartographie" title="Voir plus bas"><img src="img/arrow_down_dark.svg" alt="" class="arrow_down" /></a>
+                      <button class="controls" id="pauseSlide"><span>Mettre en pause le diaporama</span><img src="public/img/pause.svg" alt="" id="pauseSlideImg" /></button>
+                      <a href="#cartographie" title="Voir plus bas"><img src="public/img/arrow_down_dark.svg" alt="" class="arrow_down" /></a>
                     </div>
                 </div>
 
