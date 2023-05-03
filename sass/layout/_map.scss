@@ -135,7 +135,7 @@ Map, station and reservation
         }
         
         & span {
-            color: #464646;
+            color: $station-color;
         }
     }
     
@@ -175,7 +175,7 @@ Map, station and reservation
     
     &__input[type="text"] {
         width: 280px;
-        border-bottom: 3px solid #fff;
+        border-bottom: 3px solid $border-color;
         background: $background-color;
         margin: 0 0 5px;
         padding: 10px;
@@ -201,14 +201,14 @@ Map, station and reservation
         -webkit-transition: border-color 0.3s ease-in-out;
         -moz-transition: border-color 0.3s ease-in-out;
         transition: border-color 0.3s ease-in-out;
-        border-bottom: 3px solid #aaa;
+        border-bottom: 3px solid #fff;
     }
     
     &__input:required {
         border-top: none;
         border-left: none;
         border-right: none;
-        border-bottom: 3px solid #fff;
+        border-bottom: 3px solid $border-color;
         box-shadow: none;
     }
 }
@@ -222,8 +222,8 @@ abbr {
 
 canvas {
     cursor: crosshair;
-    border: 1px dotted #fff;
-    border-bottom: 3px solid #fff;
+    border: 1px dotted $border-color;
+    border-bottom: 3px solid $border-color;
 }
 
 // To do : refactoring and optimize
@@ -256,7 +256,7 @@ canvas {
 #buttonValid button:hover, 
 #buttonClear button:hover, 
 #buttonCancel button:hover {
-    border: 2px solid #eee;
+    border: 2px solid $border-color;
 }
 
 #errorReserv, 

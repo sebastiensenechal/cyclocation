@@ -144,38 +144,25 @@ Slideshow
     }
     
     #arrowLeft > .arrow-left {
-        height: 30px;
-        width: 30px;
-        border-top: 5px solid #454545;
-        border-right: 5px solid #454545;
-        -webkit-transform: rotate(225deg);
-        -ms-transform: rotate(225deg);
-        -o-transform: rotate(225deg);
-        transform: rotate(225deg);
-        
-        @media (max-width: 30em) {
-            height: 44px;
-            width: 44px;
-            border-top: 4px solid #454545;
-            border-right: 4px solid #454545;
-        }
+        @include transformRotate(225deg);
     }
     
     #arrowRight > .arrow-right {
+        @include transformRotate(45deg);
+    }
+
+    #arrowRight > .arrow-right,
+    #arrowLeft > .arrow-left { // duplicate
         height: 30px;
         width: 30px;
-        border-top: 5px solid #454545;
-        border-right: 5px solid #454545;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
+        border-top: 5px solid $station-color;
+        border-right: 5px solid $station-color;
         
         @media (max-width: 30em) {
             height: 44px;
             width: 44px;
-            border-top: 4px solid #454545;
-            border-right: 4px solid #454545;
+            border-top: 4px solid $station-color;
+            border-right: 4px solid $station-color;
         }
     }
     
