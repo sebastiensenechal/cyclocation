@@ -3,6 +3,7 @@ Interactive map to rent a bike.
 - HTML5
 - SASS (SCSS)
 - JavaScript
+- Leaflet
 - Canvas API
 - Web Storage API
 
@@ -14,5 +15,5 @@ Interactive map to rent a bike.
 
 ## Upcoming
 - Refactoring and upgrade : JavaScript
-- Optimize SASS
+- Optimize SASS (autoprefixer, etc.)
 - Accessibility : critic and moderate
