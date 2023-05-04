@@ -12,7 +12,7 @@
     "url": "git+https://github.com/sebastiensenechal/cyclocation.git"
   },
   "author": "Sébastien Sénéchal",
-  "license": "ISC",
+  "license": "GNU GPL3",
   "bugs": {
     "url": "https://github.com/sebastiensenechal/cyclocation/issues"
   },
