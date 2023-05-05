@@ -12,8 +12,10 @@ Interactive map to rent a bike.
 - Refactoring : CSS to SCSS
 - Adjust media queries
 - Upgrade Leaflet to 1.9.3
+- Ecoindex (greenIT) = B
 
 ## Upcoming
 - Refactoring and upgrade : JavaScript
 - Optimize SASS (autoprefixer, etc.)
 - Accessibility : critic and moderate
+- Environmental statement - GreenIT (https://declaration.greenit.fr/)
