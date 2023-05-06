@@ -9,15 +9,15 @@ address {
 	font-size: 1.2em;
 	line-height: 1.6em;
 	font-weight: 400;
-
+	
 	@media (max-width: 30em) {
 		font-size:1.4em;
 	}
-
+	
 	@media screen and (min-width: 48em) and (max-width: 71.25em) {
 		font-size: 1em;
 	}
-
+	
 	@media screen and (min-width: 2560px) and (orientation: landscape) {
 		font-size:2em;
 	}
@@ -25,12 +25,12 @@ address {
 
 
 a {
-    color:#fdfdfd;
-    text-decoration: underline;
-        &:hover {
-            text-decoration: none;
-            color:rgb(242, 208, 169);
-        }
+	color:#fdfdfd;
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+		color:rgb(242, 208, 169);
+	}
 }
 
 h1 {
@@ -40,7 +40,7 @@ h1 {
 	text-transform: uppercase;
 	font-weight: 800;
 	color:$text-color;
-
+	
 	@media (max-width: 30em) {
 		font-size:2em;
 		line-height: 1em;
@@ -54,11 +54,11 @@ h2 {
 	text-transform: uppercase;
 	font-weight: 500;
 	color:#fdfdfd;
-
+	
 	@media screen and (min-width: 48em) and (max-width: 71.25em) {
 		font-size:1.8em;
 	}
-
+	
 	@media screen and (min-width: 2560px) and (orientation: landscape) {
 		font-size:4em;
 	}
@@ -69,7 +69,7 @@ h3 {
 	font-size: 1.2em;
 	line-height: 1.4em;
 	font-weight: 700;
-
+	
 	@media (max-width: 30em) {
 		font-size:1.4em;
 	}
