@@ -1,6 +1,6 @@
-@import "https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap";
-@import "https://fonts.googleapis.com/css?family=Spectral:500,700,800&display=swap";
-@import "https://fonts.googleapis.com/css?family=Material+Icons";
+@include font-face('Spectral-ExtraBold', '/public/fonts/Spectral-ExtraBold', 800, extrabold);
+@include font-face('Spectral-Bold', '/public/fonts/Spectral-Bold', 700, bold);
+@include font-face('Spectral-Medium', '/public/fonts/Spectral-Medium', 500, medium);
 
 p,
 a,
@@ -9,15 +9,15 @@ address {
 	font-size: 1.2em;
 	line-height: 1.6em;
 	font-weight: 400;
-
+	
 	@media (max-width: 30em) {
 		font-size:1.4em;
 	}
-
+	
 	@media screen and (min-width: 48em) and (max-width: 71.25em) {
 		font-size: 1em;
 	}
-
+	
 	@media screen and (min-width: 2560px) and (orientation: landscape) {
 		font-size:2em;
 	}
@@ -25,22 +25,22 @@ address {
 
 
 a {
-    color:#fdfdfd;
-    text-decoration: underline;
-        &:hover {
-            text-decoration: none;
-            color:rgb(242, 208, 169);
-        }
+	color:#fdfdfd;
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+		color:rgb(242, 208, 169);
+	}
 }
 
 h1 {
-	font-family: $font-family_1;
+	font-family: "Spectral-ExtraBold", serif;
 	font-size: 2.5em;
 	line-height: 1.4em;
 	text-transform: uppercase;
 	font-weight: 800;
 	color:$text-color;
-
+	
 	@media (max-width: 30em) {
 		font-size:2em;
 		line-height: 1em;
@@ -48,34 +48,29 @@ h1 {
 }
 
 h2 {
-	font-family: $font-family_1;
+	font-family: "Spectral-Medium", serif;
 	font-size: 2.2em;
 	line-height: 1.4em;
 	text-transform: uppercase;
 	font-weight: 500;
 	color:#fdfdfd;
-
+	
 	@media screen and (min-width: 48em) and (max-width: 71.25em) {
 		font-size:1.8em;
 	}
-
+	
 	@media screen and (min-width: 2560px) and (orientation: landscape) {
 		font-size:4em;
 	}
 }
 
 h3 {
-	font-family: $font-family_1;
+	font-family: "Spectral-Bold", serif;
 	font-size: 1.2em;
 	line-height: 1.4em;
 	font-weight: 700;
-
+	
 	@media (max-width: 30em) {
 		font-size:1.4em;
 	}
 }
-
-h4 {
-	font-family: $font-family_1;
-}
-
