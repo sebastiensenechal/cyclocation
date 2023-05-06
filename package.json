@@ -1,6 +1,6 @@
 {
   "name": "cyclocation",
-  "version": "1.2.1-beta",
+  "version": "1.2.1",
   "description": "interactive map for rent a bike",
   "main": "index.js",
   "scripts": {
