@@ -7,6 +7,9 @@ Interactive map to rent a bike.
 - Canvas API
 - Web Storage API
 
+## Release note (v1.2.1-beta)
+- Preload style and test for eliminate render-blocking resources
+
 ## Release note v1.2.0
 - Change organisazion (system 7-1) and path for SASS compilation
 - Refactoring : CSS to SCSS
