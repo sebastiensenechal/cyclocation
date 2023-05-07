@@ -16,12 +16,11 @@
         <meta property="og:image" content="public/img/topo2.png" />
         <meta property="og:type" content="website" />
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
-        <!-- test 
-        <link rel="preload" href="public/css/main.min.css" as="style" onload="this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="public/css/main.min.css"></noscript>-->
+        <link rel="preload" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" as="style" onload="this.rel='stylesheet'" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
+        <noscript><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""></noscript>
         <link rel="preconnect" href="https://unpkg.com/"/>
         <!-- SASS to CSS -->
-        <link rel="stylesheet" href="public/css/main.min.css">
+        <link rel="stylesheet" href="public/css/main.min.css" async>
     </head>
 
     <body>
@@ -163,17 +162,16 @@
 
         <!-- ======== Scripts and CSS ======== -->
         <!-- diaporama.js -->
-        <script src="js/diaporama.js"></script>
+        <script src="js/diaporama.js" async></script>
         <!-- map.js + markers -->
         <script src="js/map.js"></script>
         <!-- leaflet -->
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
         <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
         <!-- reservation.js -->
-        <script src="js/reservation.js"></script>
+        <script src="js/reservation.js" async></script>
         <script>Maps.initMap();</script>
         <!-- canvas.js -->
-        <script src="js/canvas.js"></script>
+        <script src="js/canvas.js" defer></script>
     </body>
 
 </html>
