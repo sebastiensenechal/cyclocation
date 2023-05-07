@@ -1,6 +1,28 @@
+<<<<<<< HEAD
 @include font-face('Spectral-ExtraBold', '/public/fonts/Spectral-ExtraBold', 800);
 @include font-face('Spectral-Bold', '/public/fonts/Spectral-Bold', 700);
 @include font-face('Spectral-Medium', '/public/fonts/Spectral-Medium', 500);
+=======
+@font-face {
+    font-family: 'Spectral-ExtraBold';
+    src: url("/public/fonts/Spectral-ExtraBold.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'Spectral-Bold';
+    src: url("/public/fonts/Spectral-Bold.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'Spectral-Medium';
+    src: url("/public/fonts/Spectral-Medium.ttf") format('truetype');
+}
+
+body {
+    font-family: $font-family-base;
+	font-display: swap;
+    font-size: 16px;
+    line-height: 24px;
+}
+>>>>>>> hotfix/font-face
 
 p,
 a,
