@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-@include font-face('Spectral-ExtraBold', '/public/fonts/Spectral-ExtraBold', 800);
-@include font-face('Spectral-Bold', '/public/fonts/Spectral-Bold', 700);
-@include font-face('Spectral-Medium', '/public/fonts/Spectral-Medium', 500);
-=======
 @font-face {
     font-family: 'Spectral-ExtraBold';
     src: url("/public/fonts/Spectral-ExtraBold.ttf") format('truetype');
@@ -22,7 +17,6 @@ body {
     font-size: 16px;
     line-height: 24px;
 }
->>>>>>> hotfix/font-face
 
 p,
 a,
