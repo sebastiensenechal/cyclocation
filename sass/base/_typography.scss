@@ -1,14 +1,23 @@
 @font-face {
-    font-family: 'Spectral-ExtraBold';
-    src: url("/public/fonts/Spectral-ExtraBold.ttf") format('truetype');
+    font-family: 'Spectral';
+	font-weight: 800;
+    src: url('/public/fonts/spectral-extrabold.ttf') format('truetype'),
+		url('/public/fonts/spectral-extrabold.woff') format('woff'),
+		url('/public/fonts/spectral-extrabold.woff2') format('woff2')
 }
 @font-face {
-    font-family: 'Spectral-Bold';
-    src: url("/public/fonts/Spectral-Bold.ttf") format('truetype');
+    font-family: 'Spectral';
+	font-weight: 700;
+    src: url("/public/fonts/spectral-bold.ttf") format('truetype'),
+		url('/public/fonts/spectral-bold.woff') format('woff'),
+		url('/public/fonts/spectral-bold.woff2') format('woff2')
 }
 @font-face {
-    font-family: 'Spectral-Medium';
-    src: url("/public/fonts/Spectral-Medium.ttf") format('truetype');
+    font-family: 'Spectral';
+	font-weight: 500;
+    src: url("/public/fonts/spectral-medium.ttf") format('truetype'),
+		url('/public/fonts/spectral-medium.woff') format('woff'),
+		url('/public/fonts/spectral-medium.woff2') format('woff2')
 }
 
 body {
@@ -50,7 +59,7 @@ a {
 }
 
 h1 {
-	font-family: "Spectral-ExtraBold", Georgia, serif;
+	font-family: 'Spectral', Georgia, serif;
 	font-display: swap;
 	font-size: 2.5em;
 	line-height: 1.4em;
@@ -65,7 +74,7 @@ h1 {
 }
 
 h2 {
-	font-family: "Spectral-Medium", Georgia, serif;
+	font-family: "Spectral", Georgia, serif;
 	font-display: swap;
 	font-size: 2.2em;
 	line-height: 1.4em;
@@ -83,7 +92,7 @@ h2 {
 }
 
 h3 {
-	font-family: "Spectral-Bold", Georgia, serif;
+	font-family: "Spectral", Georgia, serif;
 	font-display: swap;
 	font-size: 1.2em;
 	line-height: 1.4em;
