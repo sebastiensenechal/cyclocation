@@ -1,6 +1,6 @@
-@include font-face('Spectral-ExtraBold', '/public/fonts/Spectral-ExtraBold', 800, extrabold);
-@include font-face('Spectral-Bold', '/public/fonts/Spectral-Bold', 700, bold);
-@include font-face('Spectral-Medium', '/public/fonts/Spectral-Medium', 500, medium);
+@include font-face('Spectral-ExtraBold', '/public/fonts/Spectral-ExtraBold', 800);
+@include font-face('Spectral-Bold', '/public/fonts/Spectral-Bold', 700);
+@include font-face('Spectral-Medium', '/public/fonts/Spectral-Medium', 500);
 
 p,
 a,
@@ -34,7 +34,8 @@ a {
 }
 
 h1 {
-	font-family: "Spectral-ExtraBold", serif;
+	font-family: "Spectral-ExtraBold", Georgia, serif;
+	font-display: swap;
 	font-size: 2.5em;
 	line-height: 1.4em;
 	text-transform: uppercase;
@@ -48,7 +49,8 @@ h1 {
 }
 
 h2 {
-	font-family: "Spectral-Medium", serif;
+	font-family: "Spectral-Medium", Georgia, serif;
+	font-display: swap;
 	font-size: 2.2em;
 	line-height: 1.4em;
 	text-transform: uppercase;
@@ -65,7 +67,8 @@ h2 {
 }
 
 h3 {
-	font-family: "Spectral-Bold", serif;
+	font-family: "Spectral-Bold", Georgia, serif;
+	font-display: swap;
 	font-size: 1.2em;
 	line-height: 1.4em;
 	font-weight: 700;
