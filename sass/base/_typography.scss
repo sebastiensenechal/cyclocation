@@ -1,6 +1,15 @@
-@include font-face('Spectral-ExtraBold', '/public/fonts/Spectral-ExtraBold', 800, extrabold);
-@include font-face('Spectral-Bold', '/public/fonts/Spectral-Bold', 700, bold);
-@include font-face('Spectral-Medium', '/public/fonts/Spectral-Medium', 500, medium);
+@font-face {
+    font-family: 'Spectral-ExtraBold';
+    src: url("/public/fonts/Spectral-ExtraBold.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'Spectral-Bold';
+    src: url("/public/fonts/Spectral-Bold.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'Spectral-Medium';
+    src: url("/public/fonts/Spectral-Medium.ttf") format('truetype');
+}
 
 p,
 a,
