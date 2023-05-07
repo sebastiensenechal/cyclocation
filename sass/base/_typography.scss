@@ -11,6 +11,13 @@
     src: url("/public/fonts/Spectral-Medium.ttf") format('truetype');
 }
 
+body {
+    font-family: $font-family-base;
+	font-display: swap;
+    font-size: 16px;
+    line-height: 24px;
+}
+
 p,
 a,
 li,
@@ -43,7 +50,8 @@ a {
 }
 
 h1 {
-	font-family: "Spectral-ExtraBold", serif;
+	font-family: "Spectral-ExtraBold", Georgia, serif;
+	font-display: swap;
 	font-size: 2.5em;
 	line-height: 1.4em;
 	text-transform: uppercase;
@@ -57,7 +65,8 @@ h1 {
 }
 
 h2 {
-	font-family: "Spectral-Medium", serif;
+	font-family: "Spectral-Medium", Georgia, serif;
+	font-display: swap;
 	font-size: 2.2em;
 	line-height: 1.4em;
 	text-transform: uppercase;
@@ -74,7 +83,8 @@ h2 {
 }
 
 h3 {
-	font-family: "Spectral-Bold", serif;
+	font-family: "Spectral-Bold", Georgia, serif;
+	font-display: swap;
 	font-size: 1.2em;
 	line-height: 1.4em;
 	font-weight: 700;
