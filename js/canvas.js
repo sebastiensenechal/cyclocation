@@ -101,13 +101,13 @@ var SignCanvas = {
 
 
 
-SignCanvas.canvas.addEventListener("touchstart", SignCanvas.initTouch);
-SignCanvas.canvas.addEventListener("touchmove", SignCanvas.initTouch);
-SignCanvas.canvas.addEventListener("touchend", SignCanvas.initTouch);
+SignCanvas.canvas.addEventListener("touchstart", SignCanvas.initTouch, {passive: true});
+SignCanvas.canvas.addEventListener("touchmove", SignCanvas.initTouch, {passive: true});
+SignCanvas.canvas.addEventListener("touchend", SignCanvas.initTouch, {passive: true});
 
-SignCanvas.canvas.addEventListener("mousedown", SignCanvas.activateDrawing.bind(SignCanvas));
-SignCanvas.canvas.addEventListener("mousemove", SignCanvas.movingMouse.bind(SignCanvas));
-SignCanvas.canvas.addEventListener("mouseup", SignCanvas.disableDrawing.bind(SignCanvas));
+SignCanvas.canvas.addEventListener("mousedown", SignCanvas.activateDrawing.bind(SignCanvas), {passive: true});
+SignCanvas.canvas.addEventListener("mousemove", SignCanvas.movingMouse.bind(SignCanvas), {passive: true});
+SignCanvas.canvas.addEventListener("mouseup", SignCanvas.disableDrawing.bind(SignCanvas), {passive: true});
 
 document.getElementById("buttonClear").addEventListener("click", function() {
     SignCanvas.clearCanvas();
