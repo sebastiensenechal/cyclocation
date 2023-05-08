@@ -101,7 +101,7 @@ var SignCanvas = {
 
 
 
-SignCanvas.canvas.addEventListener("touchstart", SignCanvas.initTouch, {passive: true});
+SignCanvas.canvas.addEventListener("touchstart", SignCanvas.initTouch, {passive: false});
 SignCanvas.canvas.addEventListener("touchmove", SignCanvas.initTouch, {passive: true});
 SignCanvas.canvas.addEventListener("touchend", SignCanvas.initTouch, {passive: true});
 
