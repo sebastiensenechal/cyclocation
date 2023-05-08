@@ -61,11 +61,11 @@ const Slideshow = {
 
 	pauseButton: function() {
 			if(this.playing === true) {
-				document.getElementById("pauseSlideImg").src = pauseSlideImg.src.replace("pause", "play");
+				document.getElementById("pauseSlideImg").src = pauseSlideImg.src.replace("pause-blue", "play-blue");
 				this.pauseSlideshow();
 			}
 			else {
-				document.getElementById("pauseSlideImg").src = pauseSlideImg.src.replace("play", "pause");
+				document.getElementById("pauseSlideImg").src = pauseSlideImg.src.replace("play-blue", "pause-blue");
 				this.playSlideshow();
 			}
 	}

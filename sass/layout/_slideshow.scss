@@ -139,25 +139,25 @@ Slideshow
     #arrowLeft > .arrow-left { // duplicate
         height: 30px;
         width: 30px;
-        border-top: 5px solid $station-color;
-        border-right: 5px solid $station-color;
+        border-top: 5px solid $text-color; 
+        border-right: 5px solid $text-color;
         
         @media (max-width: 30em) {
             height: 44px;
             width: 44px;
-            border-top: 4px solid $station-color;
-            border-right: 4px solid $station-color;
+            border-top: 4px solid $text-color;
+            border-right: 4px solid $text-color;
         }
     }
     
     #control {
         position: absolute;
         z-index: 2;
-        top: 85%;
+        top: 80%;
         left: 47%;
         
         @media (max-width: 30em) {
-            top: 90%;
+            top: 85%;
             left: 40%;
         }
     }
@@ -172,13 +172,6 @@ Slideshow
     #pauseSlide {
         display: inline-block;
         cursor: pointer;
-    }
-    
-    img.arrow_down, 
-    #pauseSlideImg {
-        @media (max-width: 30em) {
-            width:30px;
-        }
     }
     
     button.controls > span {
