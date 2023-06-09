@@ -6,6 +6,7 @@ class Slideshow {
         this.playing = true; // Booleen
         this.duration = duration;
         this.autoplay = this.autoPlay();
+        this.keysKeyboard = document.addEventListener("keydown", this.keysKeyboard.bind(this));
     }
 
     autoPlay() {
@@ -56,6 +57,16 @@ class Slideshow {
 			this.playSlideshow();
 		}
 	}
+
+    keysKeyboard(event) {
+		if (event.keyCode === 39) {
+        document.addEventListener("keydown", this.next()); // Appuyer sur suivant
+    } else if (event.keyCode === 37) {
+        document.addEventListener("keydown", this.previous()); // Appuyer sur précédent
+    } else if ((event.keyCode === 13) || (event.keyCode === 19) || (event.keyCode === 32)) {
+			document.addEventListener("keydown", this.pauseButton()); // Barre espace, touche Enter et Pause
+		}
+	}
     
 }
 
@@ -63,3 +74,5 @@ const slideshow = new Slideshow("slide", 5000);
 // slideshow.autoPlay(5000);
 
 document.getElementById("pauseSlide").addEventListener("click", slideshow.pauseButton.bind(slideshow));
+document.getElementById("arrowRight").addEventListener("click", slideshow.next.bind(slideshow));
+document.getElementById("arrowLeft").addEventListener("click", slideshow.previous.bind(slideshow));
