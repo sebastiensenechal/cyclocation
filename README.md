@@ -8,6 +8,9 @@ Interactive map to rent a bike.
 - Web Storage API
 
 ## Release note
+### v1.2.4
+- Refactoring diaporama.js to class Slideshow.js
+
 ### v1.2.2
 - hotfix font display
 - hotfix font (404)
