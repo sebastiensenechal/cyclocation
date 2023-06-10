@@ -1,10 +1,10 @@
 class Slideshow {
     
-    constructor(items, duration) {
-        this.items = document.getElementsByClassName(items); // DOM element for slide
-        this.diapoNum = 0;
-        this.playing = true; // Booleen
+    constructor(slides, duration) {
+        this.slides = document.getElementsByClassName(slides); // DOM element for slide
+        this.slideIndex = 0;
         this.duration = duration;
+        this.playing = true; // Booleen for autoplay
         this.autoplay = this.autoPlay();
         this.keysKeyboard = document.addEventListener("keydown", this.keysKeyboard.bind(this));
     }
@@ -16,26 +16,25 @@ class Slideshow {
     } 
     
     next() {
-        this.items[this.diapoNum].style.opacity = "0";
-        if (this.diapoNum === this.items.length -1) {
-            this.diapoNum = 0;
+        this.slides[this.slideIndex].style.opacity = "0";
+        if (this.slideIndex === this.slides.length -1) {
+            this.slideIndex = 0;
         } else {
-            this.diapoNum++;
+            this.slideIndex++;
         }
-        this.items[this.diapoNum].style.opacity = "1";
+        this.slides[this.slideIndex].style.opacity = "1";
     }
     
     previous() {
-        this.items[this.diapoNum].style.opacity = "0";
-        if (this.diapoNum === 0) {
-            this.diapoNum = this.items.length -1;
+        this.slides[this.slideIndex].style.opacity = "0";
+        if (this.slideIndex === 0) {
+            this.slideIndex = this.slides.length -1;
         } else {
-            this.diapoNum--;
+            this.slideIndex--;
         }
-        this.items[this.diapoNum].style.opacity = "1";
+        this.slides[this.slideIndex].style.opacity = "1";
     }
     
-    // Mise en pause et lecture
     pauseSlideshow() {
         this.playing = false;
         clearInterval(this.timer);
@@ -60,18 +59,17 @@ class Slideshow {
     
     keysKeyboard(event) {
         if (event.keyCode === 39) {
-            document.addEventListener("keydown", this.next()); // Appuyer sur suivant
+            document.addEventListener("keydown", this.next()); // Right
         } else if (event.keyCode === 37) {
-            document.addEventListener("keydown", this.previous()); // Appuyer sur précédent
+            document.addEventListener("keydown", this.previous()); // Left
         } else if ((event.keyCode === 13) || (event.keyCode === 19) || (event.keyCode === 32)) {
-            document.addEventListener("keydown", this.pauseButton()); // Barre espace, touche Enter et Pause
+            document.addEventListener("keydown", this.pauseButton()); // Escape, Enter and Pause
         }
     }
     
 }
 
 const slideshow = new Slideshow("slide", 5000);
-// slideshow.autoPlay(5000);
 
 document.getElementById("pauseSlide").addEventListener("click", slideshow.pauseButton.bind(slideshow));
 document.getElementById("arrowRight").addEventListener("click", slideshow.next.bind(slideshow));
